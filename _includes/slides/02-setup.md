@@ -34,9 +34,14 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 $ git config --global color.ui "auto"
 ```
 
----
-
 Please use your own name and email address instead of Dracula's.
+
+--
+
+![Bela Lugosi as Dracula](../fig/dracula.jpg)
+
+???
+
 This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
 [GitHub](http://github.com/),
@@ -52,28 +57,21 @@ He also has to set his favorite text editor, following this table:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
-|Atom | `$ git config --global core.editor "atom --wait"`|
+|Atom                | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
 | Text Wrangler      | `$ git config --global core.editor "edit -w"`    |
 | Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
-| Sublime Text (Win, 32-bit install) | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"` |
+| Visual Studio Code (Win) | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
 | Sublime Text (Win, 64-bit install) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
-| Notepad++ (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 | Notepad++ (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
-| Kate (Linux)       | `$ git config --global core.editor "kate"`       |
-| Gedit (Linux)      | `$ git config --global core.editor "gedit -s -w"`   |
-| Scratch (Linux)       | `$ git config --global core.editor "scratch-text-editor"`  |
-| emacs              | `$ git config --global core.editor "emacs"`   |
-| vim                | `$ git config --global core.editor "vim"`   |
+| emacs              | `$ git config --global core.editor "emacs"`      |
+| vim                | `$ git config --global core.editor "vim"`        |
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
 
----
+## Exiting Vim
 
-> ## Exiting Vim
->
-> Note that `vim` is the default editor for for many programs, if you haven't used `vim` before and wish to exit a session, type `Esc` then `:q!` and `Enter`.
-{: .callout}
+Note that `vim` is the default editor for for many programs, if you haven't used `vim` before and wish to exit a session, type `Esc` then `:q!` and `Enter`.
 
 ---
 
