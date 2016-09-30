@@ -8,7 +8,6 @@ Questions:
 
 Objectives:
 - Explain what the HEAD of a repository is and how to use it.
-- Identify and use Git commit numbers.
 - Compare various versions of tracked files.
 - Restore old versions of files.
 
@@ -18,13 +17,7 @@ Keypoints:
 
 ---
 
-As we saw in the previous lesson, we can refer to commits by their
-identifiers.  You can refer to the _most recent commit_ of the working
-directory by using the identifier `HEAD`.
-
-We've been adding one line at a time to `mars.txt`, so it's easy to track our
-progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make a change to `mars.txt`.
+Let's make another small change:
 
 ```bash
 $ nano mars.txt
@@ -38,9 +31,9 @@ But the Mummy will appreciate the lack of humidity
 An ill-considered change
 ```
 
----
+--
 
-Now, let's see what we get.
+Whadda ya got?
 
 ```bash
 $ git diff HEAD mars.txt
@@ -58,20 +51,21 @@ index b36abfd..0848c8d 100644
 +An ill-considered change.
 ```
 
+???
+
+As we saw in the previous lesson, we can refer to commits by their
+identifiers.  You can refer to the _most recent commit_ of the working
+directory by using the identifier `HEAD`.
+
+We've been adding one line at a time to `mars.txt`, so it's easy to track our
+progress by looking, so let's do that using our `HEAD`s.  Before we start,
+let's make a change to `mars.txt`.
+
 which is the same as what you would get if you leave out `HEAD` (try it).
 
 ---
 
-The real goodness in all this is when you can refer to previous commits.  We do
-that by adding `~1` to refer to the commit one before `HEAD`.
-
-```bash
-$ git diff HEAD~1 mars.txt
-```
-
-If we want to see what we changed at different steps, we can use `git diff`
-again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to old
-commits:
+What about looking further back in time?
 
 ```bash
 $ git diff HEAD~1 mars.txt
@@ -88,7 +82,17 @@ index 315bf3a..b36abfd 100644
 +But the Mummy will appreciate the lack of humidity
 ```
 
----
+???
+
+The real goodness in all this is when you can refer to previous commits.  We do
+that by adding `~1` to refer to the commit one before `HEAD`.
+
+If we want to see what we changed at different steps, we can use `git diff`
+again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to old
+commits.
+
+
+--
 
 ```bash
 $ git diff HEAD~2 mars.txt
@@ -105,7 +109,7 @@ index df0654a..b36abfd 100644
 +But the Mummy will appreciate the lack of humidity
 ```
 
----
+???
 
 In this way, we can build up a chain of commits.
 
@@ -117,16 +121,7 @@ while `HEAD~123` goes back 123 commits from where we are now.
 
 ---
 
-We can also refer to commits using
-those long strings of digits and letters
-that `git log` displays.
-These are unique IDs for the changes,
-and "unique" really does mean unique:
-every change to any set of files on any computer
-has a unique 40-character identifier.
-Our first commit was given the ID
-f22b25e3233b4645dabd0d81e651fe074bd8e73b,
-so let's try this:
+We can refer to commits by id:
 
 ```bash
 $ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
@@ -143,11 +138,7 @@ index df0654a..b36abfd 100644
 +But the Mummy will appreciate the lack of humidity
 ```
 
----
-
-That's the right answer,
-but typing out random 40-character strings is annoying,
-so Git lets us use just the first few characters:
+--
 
 ```bash
 $ git diff f22b25e mars.txt
@@ -164,11 +155,26 @@ index df0654a..b36abfd 100644
 +But the Mummy will appreciate the lack of humidity
 ```
 
+???
+
+We can also refer to commits using
+those long strings of digits and letters
+that `git log` displays.
+These are unique IDs for the changes,
+and "unique" really does mean unique:
+every change to any set of files on any computer
+has a unique 40-character identifier.
+Our first commit was given the ID
+f22b25e3233b4645dabd0d81e651fe074bd8e73b,
+so let's try this:
+
+
+That's the right answer,
+but typing out random 40-character strings is annoying,
+so Git lets us use just the first few characters.
+
 ---
 
-All right! So
-we can save changes to files and see what we've changed—now how
-can we restore older versions of things?
 Let's suppose we accidentally overwrite our file:
 
 ```bash
@@ -197,6 +203,12 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+
+???
+
+All right! So
+we can save changes to files and see what we've changed—now how
+can we restore older versions of things?
 
 ---
 
@@ -237,8 +249,12 @@ $ git checkout f22b25e mars.txt
 ```
 
 to revert mars.txt to its state after the commit f22b25e.
+
 If you forget `mars.txt` in that command, Git will tell you that "You are in
-'detached HEAD' state." In this state, you shouldn't make any changes.
+'detached HEAD' state."
+
+In this state, you shouldn't make any changes.
+
 You can fix this by reattaching your head using `git checkout master`
 
 ---
@@ -255,13 +271,6 @@ recent commit (`HEAD~1`), which is commit `f22b25e`:
 
 ---
 
-So, to put it all together,
-here's how Git works in cartoon form:
-
-![http://figshare.com/articles/How_Git_works_a_cartoon/1328266](../fig/git_staging.svg)
-
----
-
 ## Simplifying the Common Case
 
 If you read the output of `git status` carefully,
@@ -270,6 +279,21 @@ you'll see that it includes this hint:
 ```
 (use "git checkout -- <file>..." to discard changes in working directory)
 ```
+
+Try deleting a file:
+
+```bash
+$ rm mars.txt
+$ ls
+```
+
+Then put it back:
+
+```bash
+$ git checkout -- mars.txt
+```
+
+???
 
 As it says,
 `git checkout` without a version identifier restores files to the state saved in `HEAD`.
