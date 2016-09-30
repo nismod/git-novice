@@ -12,41 +12,49 @@ Keypoints:
 
 ---
 
-Once Git is configured,
-we can start using it.
-Let's create a directory for our work and then move into that directory:
+Let's move to our home directory, create a directory for our work and then move into that directory:
 
 ```bash
+$ cd
 $ mkdir planets
 $ cd planets
 ```
 
+???
+
+Once Git is configured,
+we can start using it.
+
 Then we tell Git to make `planets` a [repository]({{ page.root }}/reference/#repository)—a place where
 Git can store versions of our files:
+
+---
+
+Make a git repository!
 
 ```bash
 $ git init
 ```
 
----
-
-If we use `ls` to show the directory's contents,
-it appears that nothing has changed:
+Look to see if any files were added:
 
 ```bash
 $ ls
 ```
-
-But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `planets` called `.git`:
+What about hidden files?
 
 ```bash
 $ ls -a
 ```
 
-```bash
+```
 .	..	.git
 ```
+
+???
+
+But if we add the `-a` flag to show everything,
+we can see that Git has created a hidden directory within `planets` called `.git`:
 
 Git stores information about the project in this special sub-directory.
 If we ever delete it,
@@ -54,8 +62,7 @@ we will lose the project's history.
 
 ---
 
-We can check that everything is set up correctly
-by asking Git to tell us the status of our project:
+Let's ask Git to tell us the status of our project:
 
 ```bash
 $ git status
@@ -68,6 +75,11 @@ $ git status
 #
 nothing to commit (create/copy files and use "git add" to track)
 ```
+
+???
+
+We can check that everything is set up correctly
+by asking git for a status update
 
 ---
 

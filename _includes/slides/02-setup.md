@@ -13,20 +13,9 @@ Keypoints:
 
 ---
 
-When we use Git on a new computer for the first time,
-we need to configure a few things. Below are a few examples
-of configurations we will set as we get started with Git:
+## Git config
 
-*   our name and email address,
-*   to colorize our output,
-*   what our preferred text editor is,
-*   and that we want to use these settings globally (i.e. for every project)
-
----
-
-On a command line, Git commands are written as `git verb`,
-where `verb` is what we actually want to do. So here is how
-Dracula sets up his new laptop:
+So here is how Dracula sets up his new laptop:
 
 ```bash
 $ git config --global user.name "Vlad Dracula"
@@ -35,6 +24,20 @@ $ git config --global color.ui "auto"
 ```
 
 Please use your own name and email address instead of Dracula's.
+
+???
+
+On a command line, Git commands are written as `git verb`,
+where `verb` is what we actually want to do.
+
+When we use Git on a new computer for the first time,
+we need to configure a few things. Below are a few examples
+of configurations we will set as we get started with Git:
+
+*   our name and email address,
+*   to colorize our output,
+*   what our preferred text editor is,
+*   and that we want to use these settings globally (i.e. for every project)
 
 --
 
@@ -53,19 +56,20 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 ---
 
-He also has to set his favorite text editor, following this table:
+Pick your favourite text editor:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
 |Atom                | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
-| Text Wrangler      | `$ git config --global core.editor "edit -w"`    |
 | Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
+| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
 | Visual Studio Code (Win) | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
-| Sublime Text (Win, 64-bit install) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
-| Notepad++ (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
-| emacs              | `$ git config --global core.editor "emacs"`      |
+| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 | vim                | `$ git config --global core.editor "vim"`        |
+
+
+???
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
 
@@ -75,14 +79,17 @@ Note that `vim` is the default editor for for many programs, if you haven't used
 
 ---
 
-The four commands we just ran above only need to be run once: the flag `--global` tells Git
-to use the settings for every project, in your user account, on this computer.
 
 You can check your settings at any time:
 
 ```bash
 $ git config --list
 ```
+
+???
+
+The four commands we just ran above only need to be run once: the flag `--global` tells Git
+to use the settings for every project, in your user account, on this computer.
 
 You can change your configuration as many times as you want: just use the
 same commands to choose another editor or update your email address.
@@ -91,11 +98,17 @@ same commands to choose another editor or update your email address.
 
 ## Git Help and Manual
 
-Always remember that if you forget a git command, you can access the list of command by using -h and access the git manual by using --help :
-
 ```bash
 $ git config -h
 $ git config --help
 ```
+
+[Git Docs](https://git-scm.com/doc)
+- [online book](https://git-scm.com/book)
+- [cheatsheet](https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf)
+
+???
+
+Always remember that if you forget a git command, you can access the list of command by using -h and access the git manual by using --help :
 
 [git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
