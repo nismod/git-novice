@@ -56,7 +56,7 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 ---
 
-Pick your favourite text editor:
+Pick your favourite text editor for commit messages:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
@@ -68,6 +68,12 @@ Pick your favourite text editor:
 | Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 | vim                | `$ git config --global core.editor "vim"`        |
 
+You can check your settings at any time:
+
+```bash
+$ git config --list
+```
+
 
 ???
 
@@ -76,17 +82,6 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 ## Exiting Vim
 
 Note that `vim` is the default editor for for many programs, if you haven't used `vim` before and wish to exit a session, type `Esc` then `:q!` and `Enter`.
-
----
-
-
-You can check your settings at any time:
-
-```bash
-$ git config --list
-```
-
-???
 
 The four commands we just ran above only need to be run once: the flag `--global` tells Git
 to use the settings for every project, in your user account, on this computer.
@@ -106,6 +101,7 @@ $ git config --help
 [Git Docs](https://git-scm.com/doc)
 - [online book](https://git-scm.com/book)
 - [cheatsheet](https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf)
+- [full reference](https://git-scm.com/docs)
 
 ???
 
