@@ -2,20 +2,17 @@
 # 4. Tracking Changes
 
 Questions:
-- How do I record changes in Git?
+- How do I record changes in Git, and notes about my changes?
 - How do I check the status of my version control repository?
-- How do I record notes about what changes I made and why?
 
 Objectives:
-- Go through the modify-add-commit cycle for one or more files.
 - Explain where information is stored at each stage of Git commit workflow.
 
 Keypoints:
 - `git status` shows the status of a repository.
-- Files can be stored in a project's working directory (which users see), the staging area (where the next commit is being built up) and the local repository (where commits are permanently recorded).
+- Files can be stored in a project's working directory, the staging area and the local repository.
 - `git add` puts files in the staging area.
 - `git commit` saves the staged content as a new commit in the local repository.
-- Always write a log message when committing changes.
 
 ---
 
@@ -69,7 +66,7 @@ $ git status
 ```
 
 
-```bash
+```
 On branch master
 
 Initial commit
@@ -90,13 +87,13 @@ that Git isn't keeping track of.
 
 We can tell Git to track a file using `git add`:
 
-```
+```bash
 $ git add mars.txt
 ```
 
 and then check that the right thing happened:
 
-```
+```bash
 $ git status
 ```
 
@@ -120,7 +117,9 @@ but it hasn't recorded these changes as a commit yet.
 
 ---
 
-```
+Then we can record these changes as a commit:
+
+```bash
 $ git commit -m "Start notes on Mars as a base"
 ```
 
@@ -134,7 +133,7 @@ $ git commit -m "Start notes on Mars as a base"
 
 If we run `git status` now:
 
-```
+```bash
 $ git status
 ```
 
@@ -216,6 +215,8 @@ $ cat mars.txt
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 ```
+
+--
 
 When we run `git status` now,
 it tells us that a file it already knows about has been modified:
@@ -314,6 +315,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Whoops! Git won't commit because we didn't use `git add` first.
 
+--
+
 ```bash
 $ git add mars.txt
 $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
@@ -359,6 +362,8 @@ The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 ```
 
+--
+
 ```
 $ git diff
 ```
@@ -374,7 +379,7 @@ index 315bf3a..b36abfd 100644
 +But the Mummy will appreciate the lack of humidity
 ```
 
---
+---
 
 ```bash
 $ git add mars.txt
@@ -469,6 +474,10 @@ On branch master
 nothing to commit, working directory clean
 ```
 
+--
+
+All done!
+
 ---
 
 To look at the history of what we've done so far:
@@ -497,7 +506,23 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
     Start notes on Mars as a base
 ```
 
---
+???
+
+## Paging the Log
+
+When the output of `git log` is too long to fit in your screen,
+`git` uses a program to split it into pages of the size of your screen.
+When this "pager" is called, you will notice that the last line in your
+screen is a `:`, instead of your usual prompt.
+
+*   To get out of the pager, press `q`.
+*   To move to the next page, press the space bar.
+*   To search for `some_word` in all pages, type `/some_word`
+    and navigate throught matches pressing `n`.
+
+---
+
+Or just the latest commit:
 
 ```
 $ git log -1
@@ -512,18 +537,6 @@ Date:   Thu Aug 22 10:14:07 2013 -0400
 ```
 
 ???
-
-## Paging the Log
-
-When the output of `git log` is too long to fit in your screen,
-`git` uses a program to split it into pages of the size of your screen.
-When this "pager" is called, you will notice that the last line in your
-screen is a `:`, instead of your usual prompt.
-
-*   To get out of the pager, press `q`.
-*   To move to the next page, press the space bar.
-*   To search for `some_word` in all pages, type `/some_word`
-    and navigate throught matches pressing `n`.
 
 ## Limit Log Size
 
@@ -576,6 +589,10 @@ we first need to add the changed files to the staging area
 (`git add`) and then commit the staged changes to the
 repository (`git commit`):
 
+---
+
+## Modify, Stage, Commit
+
 ![The Git Commit Workflow](../fig/git-committing.svg)
 
 ---
@@ -590,10 +607,14 @@ last commit made to `mars.txt`?
 
 --
 
-## Solution
+## Suggested solution
 Answer 1 is not descriptive enough,
 and answer 2 is too descriptive and redundant,
 but answer 3 is good: short but descriptive.
+
+With larger changes, more detail might be helpful - commit messages
+often have a short first line to summarise the change, and any further
+details can be written as necessary.
 
 ---
 
@@ -631,7 +652,6 @@ and commit those changes.
 --
 
 ## Solution
-First we make our changes to the `mars.txt` and `venus.txt` files:
 
 ```
 $ nano mars.txt
@@ -666,7 +686,7 @@ $ git add mars.txt
 $ git add venus.txt
 ```
 
----
+--
 
 Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
 
@@ -702,7 +722,7 @@ Create a new repository and create two commits: one without the
 author. Run `git log` and `git log --format=full`. Think about ways
 how that can allow you to collaborate with your colleagues.
 
---
+---
 
 ## Solution
 
