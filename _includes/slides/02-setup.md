@@ -23,7 +23,7 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 $ git config --global color.ui "auto"
 ```
 
-Please use your own name and email address instead of Dracula's.
+__Please use your own name and email address instead of Dracula's.__
 
 ???
 
@@ -116,3 +116,10 @@ $ git config --help
 Always remember that if you forget a git command, you can access the list of command by using -h and access the git manual by using --help :
 
 [git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
+
+---
+
+## Summary
+
+* Use `git config` to setup configuration before using git on a new computer
+* You only need to do this once
