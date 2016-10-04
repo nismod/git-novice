@@ -25,6 +25,10 @@ $ mkdir planets
 $ cd planets
 ```
 
+## Note
+
+Your 'home directory' on Windows is something like `C:\Users\Dracula\`
+
 ???
 
 Once Git is configured,
@@ -110,15 +114,32 @@ by asking git for a status update
 Think about starting a new project, `moons`, related to our `planets` project.
 
 ```bash
-cd             # return to home directory
-mkdir planets  # make a new directory planets
-cd planets     # go into planets
-git init       # make the planets directory a Git repository
-mkdir moons    # make a sub-directory planets/moons
-cd moons       # go into planets/moons
-git init       # make the moons sub-directory a Git repository
+$ cd             # return to home directory
+$ mkdir planets  # make a new directory planets
+$ cd planets     # go into planets
+$ git init       # make the planets directory a Git repository
+$ mkdir moons    # make a sub-directory planets/moons
+$ cd moons       # go into planets/moons
+$ git init       # make the moons sub-directory a Git repository
 ```
 
 Why might it be a bad idea to do this?
 
 How can we undo the last `git init`?
+
+## Note
+
+The commands above make the following directory structure:
+
+```bash
+~/planets/
+~/planets/.git
+~/planets/moons
+~/planets/moons/.git
+```
+
+---
+
+## Summary
+
+Use `git init` to initialise a repository
