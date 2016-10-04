@@ -62,6 +62,14 @@ complete history of commits for a particular project and their metadata make up
 a [repository]({{ page.root }}/reference/#repository). Repositories can be kept in sync
 across different computers facilitating collaboration among different people.
 
+---
+
+## A project keeps all changes in a _repository_
+
+![Stage changes to a repository](../fig/git-staging-area.svg)
+
+???
+
 ## The Long History of Version Control Systems
 
 Automated version control systems are nothing new.
@@ -72,7 +80,9 @@ are *distributed*, meaning that they do not need a centralized server to host th
 These modern systems also include powerful merging tools that make it possible for multiple authors to work within
 the same files concurrently.
 
-## Paper Writing
+---
+
+## Exercise: Paper Writing
 
 *   Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin it. How would you retrieve
     the *excellent* version of your conclusion? Is it even possible?

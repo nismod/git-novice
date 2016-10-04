@@ -44,13 +44,19 @@ In particular, this does not have to be the `core.editor` you set globally earli
 $ ls
 ```
 
+--
+
 ```
 mars.txt
 ```
 
+--
+
 ```bash
 $ cat mars.txt
 ```
+
+--
 
 ```
 Cold and dry, but everything is my favorite color
@@ -65,6 +71,7 @@ Git tells us that it's noticed the new file:
 $ git status
 ```
 
+--
 
 ```
 On branch master
@@ -97,6 +104,8 @@ and then check that the right thing happened:
 $ git status
 ```
 
+--
+
 ```
 On branch master
 
@@ -123,6 +132,8 @@ Then we can record these changes as a commit:
 $ git commit -m "Start notes on Mars as a base"
 ```
 
+--
+
 ```
 [master (root-commit) f22b25e] Start notes on Mars as a base
  1 file changed, 1 insertion(+)
@@ -136,6 +147,8 @@ If we run `git status` now:
 ```bash
 $ git status
 ```
+
+--
 
 ```
 On branch master
@@ -175,6 +188,8 @@ we can ask Git to show us the project's history using `git log`:
 $ git log
 ```
 
+--
+
 ```
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -211,9 +226,11 @@ $ nano mars.txt
 $ cat mars.txt
 ```
 
+--
+
 ```
 Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
+The two moons may be a problem for werewolves
 ```
 
 --
@@ -224,6 +241,8 @@ it tells us that a file it already knows about has been modified:
 ```
 $ git status
 ```
+
+--
 
 ```
 On branch master
@@ -256,6 +275,8 @@ What changed?
 ```
 $ git diff
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -296,9 +317,11 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 ```bash
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+$ git commit -m "Add concerns about effects of Mars' moons on werewolves"
 $ git status
 ```
+
+--
 
 ```
 On branch master
@@ -319,11 +342,13 @@ Whoops! Git won't commit because we didn't use `git add` first.
 
 ```bash
 $ git add mars.txt
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+$ git commit -m "Add concerns about effects of Mars' moons on werewolves"
 ```
 
+--
+
 ```
-[master 34961b1] Add concerns about effects of Mars' moons on Wolfman
+[master 34961b1] Add concerns about effects of Mars' moons on werewolves
  1 file changed, 1 insertion(+)
 ```
 
@@ -349,7 +374,8 @@ but not yet committed.
 
 ---
 
-Let's run through a change to stage, then commit again:
+Let's run through the process again, from (1) the working directory to (2) the
+staging area, to (3) commiting.
 
 ```
 $ nano mars.txt
@@ -358,15 +384,19 @@ $ cat mars.txt
 
 ```
 Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
+The two moons may be a problem for werewolves
 But the Mummy will appreciate the lack of humidity
 ```
 
 --
 
+What changed?
+
 ```
 $ git diff
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -375,11 +405,13 @@ index 315bf3a..b36abfd 100644
 +++ b/mars.txt
 @@ -1,2 +1,3 @@
  Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
+ The two moons may be a problem for werewolves
 +But the Mummy will appreciate the lack of humidity
 ```
 
 ---
+
+Add our change to the staging area:
 
 ```bash
 $ git add mars.txt
@@ -388,9 +420,18 @@ $ git diff
 
 --
 
+(No output from `git diff`.)
+
+--
+
+What's the difference between the staging area and what has already been
+committed?
+
 ```bash
 $ git diff --staged
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -399,7 +440,7 @@ index 315bf3a..b36abfd 100644
 +++ b/mars.txt
 @@ -1,2 +1,3 @@
  Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
+ The two moons may be a problem for werewolves
 +But the Mummy will appreciate the lack of humidity
 ```
 
@@ -456,6 +497,8 @@ And finally, committing:
 $ git commit -m "Discuss concerns about Mars' climate for Mummy"
 ```
 
+--
+
 ```
 [master 005937f] Discuss concerns about Mars' climate for Mummy
  1 file changed, 1 insertion(+)
@@ -468,6 +511,8 @@ Check our status:
 ```bash
 $ git status
 ```
+
+--
 
 ```
 On branch master
@@ -486,6 +531,8 @@ To look at the history of what we've done so far:
 $ git log
 ```
 
+--
+
 ```
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -497,7 +544,7 @@ commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
-    Add concerns about effects of Mars' moons on Wolfman
+    Add concerns about effects of Mars' moons on werewolves
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -522,11 +569,13 @@ screen is a `:`, instead of your usual prompt.
 
 ---
 
-Or just the latest commit:
+To look at the latest commit:
 
 ```
 $ git log -1
 ```
+
+--
 
 ```
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
@@ -546,13 +595,15 @@ where `N` is the number of commits that you want to receive
 the information. For example, if you only want the information
 from the last commit you can use
 
----
+--
 
-We can ask for less information:
+Or ask for less information:
 
 ```
 $ git log --oneline
 ```
+
+--
 
 ```
 * 005937f Thoughts about the climate
@@ -560,7 +611,7 @@ $ git log --oneline
 * f22b25e Starting to think about Mars
 ```
 
---
+???
 
 Or try lots more options:
 
@@ -591,13 +642,13 @@ repository (`git commit`):
 
 ---
 
-## Modify, Stage, Commit
+## Recap: Modify, Stage, Commit
 
 ![The Git Commit Workflow](../fig/git-committing.svg)
 
 ---
 
-## Choosing a Commit Message
+## Exercise: Choosing a Commit Message
 Which of the following commit messages would be most appropriate for the
 last commit made to `mars.txt`?
 
@@ -618,14 +669,12 @@ details can be written as necessary.
 
 ---
 
-## Committing Changes to Git
+## Exercise: Committing Changes to Git
 Which command(s) below would save the changes of `myfile.txt`
 to my local Git repository?
 1. `$ git commit -m "my recent changes"`
-2. `$ git init myfile.txt`
-   `$ git commit -m "my recent changes"`
-3. `$ git add myfile.txt`
-   `$ git commit -m "my recent changes"`
+2. `$ git init myfile.txt`<br>`$ git commit -m "my recent changes"`
+3. `$ git add myfile.txt`<br>`$ git commit -m "my recent changes"`
 4. `$ git commit -m myfile.txt "my recent changes"`
 
 --
@@ -638,7 +687,7 @@ to my local Git repository?
 
 ---
 
-## Committing Multiple Files
+## Exercise: Committing Multiple Files
 The staging area can hold changes from any number of files
 that you want to commit as a single snapshot.
 
@@ -649,7 +698,7 @@ about Venus as a base for you and your friends
 3. Add changes from both files to the staging area,
 and commit those changes.
 
---
+---
 
 ## Solution
 
@@ -700,57 +749,9 @@ Wrote down my plans to start a base on venus
 2 files changed, 2 insertions(+)
 ```
 
----
-
-## Author and Committer
-
-Ask for more information in the logs:
-
-```
-$ git log --format=full
-```
-
-When commiting you can name someone else as the author:
-
-```
-$ git commit --author="Vlad Dracula <vlad@tran.sylvan.ia>"
-```
-
-
-Create a new repository and create two commits: one without the
-`--author` option and one by naming a colleague of yours as the
-author. Run `git log` and `git log --format=full`. Think about ways
-how that can allow you to collaborate with your colleagues.
-
----
-
-## Solution
-
-```
-$ git add me.txt
-$ git commit -m "Updated Vlad's bio." --author="Frank N. Stein <franky@monster.com>"
-```
-
-```
-[master 4162a51] Updated Vlad's bio.
-Author: Frank N. Stein <franky@monster.com>
-1 file changed, 2 insertions(+), 2 deletions(-)
-
-$ git log --format=full
-commit 4162a51b273ba799a9d395dd70c45d96dba4e2ff
-Author: Frank N. Stein <franky@monster.com>
-Commit: Vlad Dracula <vlad@tran.sylvan.ia>
-
-Updated Vlad's bio.
-
-commit aaa3271e5e26f75f11892718e83a3e2743fab8ea
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Commit: Vlad Dracula <vlad@tran.sylvan.ia>
-
-Vlad's initial bio.
-```
-
 ???
+
+`git commit --author="Vlad Dracula <vlad@tran.sylvan.ia>"`
 
 For each of the commits you have done, Git stored your name twice.
 You are named as the author and as the committer. You can observe

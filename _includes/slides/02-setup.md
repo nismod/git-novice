@@ -56,23 +56,23 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 ---
 
-Pick your favourite text editor for commit messages:
+## Text editor for git commit messages
 
-| Editor             | Configuration command                            |
+Pick a text editor to use (we'll use `nano` for the rest of this presentation):
+
+| Command-line editors | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
-|Atom                | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
-| Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
-| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
-| Visual Studio Code (Win) | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
-| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 | vim                | `$ git config --global core.editor "vim"`        |
 
-You can check your settings at any time:
 
-```bash
-$ git config --list
-```
+| Graphical editors  | Configuration command                            |
+|:-------------------|:-------------------------------------------------|
+| Atom               | `$ git config --global core.editor "atom --wait"`|
+| Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
+| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
+| Visual Studio Code (Win)   | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
+| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 
 
 ???
@@ -90,6 +90,14 @@ You can change your configuration as many times as you want: just use the
 same commands to choose another editor or update your email address.
 
 ---
+
+## Checking config
+
+You can check your settings at any time:
+
+```bash
+$ git config --list
+```
 
 ## Git Help and Manual
 

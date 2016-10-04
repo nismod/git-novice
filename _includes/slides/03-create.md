@@ -12,6 +12,11 @@ Keypoints:
 
 ---
 
+## Starting a project
+
+Imagine we're starting a new project to establish a space base, possibly on
+mars.
+
 Let's move to our home directory, create a directory for our work and then move into that directory:
 
 ```bash
@@ -36,19 +41,34 @@ Make a git repository!
 $ git init
 ```
 
+--
+
 Look to see if any files were added:
 
 ```bash
 $ ls
 ```
-What about hidden files?
+
+--
+
+What about hidden files or folders?
 
 ```bash
 $ ls -a
 ```
 
+--
+
 ```
 .	..	.git
+```
+
+--
+
+We could ask for more details from `ls`:
+
+```bash
+$ ls -al
 ```
 
 ???
@@ -68,11 +88,13 @@ Let's ask Git to tell us the status of our project:
 $ git status
 ```
 
+--
+
 ```bash
-# On branch master
-#
-# Initial commit
-#
+On branch master
+
+Initial commit
+
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
@@ -83,11 +105,9 @@ by asking git for a status update
 
 ---
 
-## Places to Create Git Repositories
+## Exercise: Places to Create Git Repositories
 
-Dracula starts a new project, `moons`, related to his `planets` project.
-Despite Wolfman's concerns, he enters the following sequence of commands to
-create one Git repository inside another:
+Think about starting a new project, `moons`, related to our `planets` project.
 
 ```bash
 cd             # return to home directory
@@ -99,8 +119,6 @@ cd moons       # go into planets/moons
 git init       # make the moons sub-directory a Git repository
 ```
 
-Why is it a bad idea to do this?
+Why might it be a bad idea to do this?
 
-How can Dracula undo his last `git init`?
-
-
+How can we undo the last `git init`?
