@@ -352,7 +352,7 @@ let her recover the last committed version of her Python script called
 
 3. `$ git checkout HEAD~1 data_cruncher.py`
 
-4. `$ git checkout <unique ID of last commitdata_cruncher.py`
+4. `$ git checkout <unique ID of last commit> data_cruncher.py`
 
 5. Both 2 and 4
 
