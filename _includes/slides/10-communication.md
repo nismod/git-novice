@@ -19,15 +19,15 @@ Keypoints:
 ???
 ---
 
-![Github repo](../../fig/github-issue.png)
+![Github repo](../fig/github-issue.png)
 
 ---
 
-![Issues Page](../../fig/github-issue-clicked.png)
+![Issues Page](../fig/github-issue-clicked.png)
 
 ---
 
-![Create an Issue](../../fig/github-issue-create.png)
+![Create an Issue](../fig/github-issue-create.png)
 
 ???
 
