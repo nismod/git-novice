@@ -33,11 +33,13 @@ An ill-considered change
 
 --
 
-Whadda ya got?
+What changed?
 
 ```bash
 $ git diff HEAD mars.txt
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -71,6 +73,8 @@ What about looking further back in time?
 $ git diff HEAD~1 mars.txt
 ```
 
+--
+
 ```
 diff --git a/mars.txt b/mars.txt
 index 315bf3a..b36abfd 100644
@@ -97,6 +101,8 @@ commits.
 ```bash
 $ git diff HEAD~2 mars.txt
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -127,6 +133,8 @@ We can refer to commits by id:
 $ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
 ```
 
+--
+
 ```
 diff --git a/mars.txt b/mars.txt
 index df0654a..b36abfd 100644
@@ -140,9 +148,13 @@ index df0654a..b36abfd 100644
 
 --
 
+Or short id:
+
 ```bash
 $ git diff f22b25e mars.txt
 ```
+
+--
 
 ```
 diff --git a/mars.txt b/mars.txt
@@ -186,12 +198,16 @@ $ cat mars.txt
 We will need to manufacture our own oxygen
 ```
 
+--
+
 `git status` now tells us that the file has been changed,
 but those changes haven't been staged:
 
 ```bash
 $ git status
 ```
+
+--
 
 ```
 On branch master
@@ -220,27 +236,31 @@ $ git checkout HEAD mars.txt
 $ cat mars.txt
 ```
 
+--
+
 ```
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 ```
 
-As you might guess from its name,
-`git checkout` checks out (i.e., restores) an old version of a file.
-In this case,
-we're telling Git that we want to recover the version of the file recorded in `HEAD`,
-which is the last saved commit.
-If we want to go back even further,
-we can use a commit identifier instead:
+To go back even further, we can use a commit identifier instead:
 
 ```bash
 $ git checkout f22b25e mars.txt
 ```
 
+???
+
+As you might guess from its name,
+`git checkout` checks out (i.e., restores) an old version of a file.
+In this case,
+we're telling Git that we want to recover the version of the file recorded in `HEAD`,
+which is the last saved commit.
+
 ---
 
-## Don't Lose Your HEAD
+## Note: Don't Lose Your HEAD
 
 Above we used
 
@@ -250,8 +270,8 @@ $ git checkout f22b25e mars.txt
 
 to revert mars.txt to its state after the commit f22b25e.
 
-If you forget `mars.txt` in that command, Git will tell you that "You are in
-'detached HEAD' state."
+If you forget `mars.txt` in that command, Git will tell you that `You are in
+'detached HEAD' state.`
 
 In this state, you shouldn't make any changes.
 
@@ -259,15 +279,17 @@ You can fix this by reattaching your head using `git checkout master`
 
 ---
 
-It's important to remember that
-we must use the commit number that identifies the state of the repository
+Remember to use the commit number that identifies the state of the repository
 *before* the change we're trying to undo.
+
+![Git Checkout](../fig/git-checkout.svg)
+
+???
+
 A common mistake is to use the number of
 the commit in which we made the change we're trying to get rid of.
 In the example below, we want to retrieve the state from before the most
 recent commit (`HEAD~1`), which is commit `f22b25e`:
-
-![Git Checkout](../fig/git-checkout.svg)
 
 ---
 
