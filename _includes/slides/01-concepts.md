@@ -22,7 +22,14 @@ Keypoints:
 
 ## Sequential changes (_commits_)
 
+*   Version control systems start with a base version of a document
+*   They record a sequence of changes to this document
+
 ![Changes Are Saved Sequentially](../fig/play-changes.svg)
+
+*   Each change is recorded as a `commit`
+*   At any point, you can rewind - **undo** - or pick and choose which changes
+    to keep
 
 ???
 
@@ -36,7 +43,13 @@ latest version.
 
 ## Concurrent changes (_branches_)
 
+*  You can make independent sets of changes based on the
+    same document
+
 ![Different Versions Can be Saved](../fig/versions.svg)
+
+*   These result in the creation of a `branch`
+*   Branches let you take risks
 
 ???
 
@@ -49,6 +62,9 @@ same document.
 ---
 
 ## Compiling a version (_merging_)
+
+* Version control keeps track of different `branches`
+* It also helps us `merge` different branches to make one master version
 
 ![Multiple Versions Can be Merged](../fig/merge.svg)
 
@@ -66,7 +82,18 @@ across different computers facilitating collaboration among different people.
 
 ## A project keeps all changes in a _repository_
 
+* The complete history of commits for a particular project and their metadata make up
+a `repository`
+* Git requires a two step process
+    * `git add` to add files to a staging area
+    * `git commit` to write this commit to the repository
+
 ![Stage changes to a repository](../fig/git-staging-area.svg)
+
+## Note
+
+* At no point are we copying files around
+* We just record which changes have been since the last commit
 
 ???
 
@@ -89,3 +116,12 @@ the same files concurrently.
 *   Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper?
     If you use LibreOffice Writer or Microsoft Word, what happens if you accept changes made using the
     `Track Changes` option? Do you have a history of those changes?
+
+---
+
+## Summary
+
+Two main concepts:
+
+*   A `commit` is a package of changes made to some files
+*   A `repository` is a store of all the commits for a project
