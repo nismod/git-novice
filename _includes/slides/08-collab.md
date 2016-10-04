@@ -13,15 +13,12 @@ Keypoints:
 
 ---
 
-For the next step, get into pairs.  One person will be the "Owner" and the other
-will be the "Collaborator". The goal is that the Collaborator add changes into
-the Owner's repository. We will switch roles at the end, so both persons will
-play Owner and Collaborator.
+## Setup in Pairs
 
-
-The Owner needs to give the Collaborator access.
-On GitHub, click the settings button on the right,
-then select Collaborators, and enter your partner's username.
+* The Owner needs to give the Collaborator access.
+* On GitHub
+    * click the _Settings_ button on the right of the screen,
+    * then select _Collaborators_  and enter your partner's username.
 
 ![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
 
@@ -29,7 +26,19 @@ To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
 Once there she can accept access to the Owner's repo.
 
+???
+
+* For the next step, get into pairs.  
+* One person will be the "Owner" and the other
+will be the "Collaborator".
+* The goal is that the Collaborator add changes into
+the Owner's repository.
+* We will switch roles at the end, so both persons will
+play Owner and Collaborator.
+
 ---
+
+## Cloning a repository
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
  machine. This is called "cloning a repo". To clone the Owner's repo into
@@ -39,7 +48,9 @@ her `Desktop` folder, the Collaborator enters:
 $ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
 ```
 
-Replace 'vlad' with the Owner's username.
+Replace `vlad` with the Owner's username.
+
+---
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
 
@@ -143,7 +154,13 @@ Switch roles and repeat the whole process.
 
 ---
 
-## Review Changes
+## Summary
+
+- "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
+
+---
+
+## Discuss: Review Changes
 
 The Owner push commits to the repository without giving any information
 to the Collaborator. How can the Collaborator find out what has changed with
@@ -151,7 +168,7 @@ command line? And on GitHub?
 
 ---
 
-## Comment Changes in GitHub
+## Exercise: Comment Changes in GitHub
 
 The Collaborator has some questions about one line change made by the Owner and
 has some suggestions to propose.
@@ -163,9 +180,8 @@ The Collaborator posts its comments and suggestions using GitHub interface.
 
 ---
 
-## Version History, Backup, and Version Control
+## Discuss: Version History, Backup, and Version Control
 
 Some backup software can keep a history of the versions of your files. They also
 allows you to recover specific versions. How is this functionality different from version control?
 What are some of the benifits of using version control, Git and Github?
-
