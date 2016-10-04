@@ -23,7 +23,8 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 $ git config --global color.ui "auto"
 ```
 
-__Please use your own name and email address instead of Dracula's.__
+* Please use your own name and email address instead of Dracula's
+* This should be the same e-mail you used to sign up to Github
 
 ???
 
