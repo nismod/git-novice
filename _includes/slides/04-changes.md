@@ -16,6 +16,14 @@ Keypoints:
 
 ---
 
+## Here's what we are going to do...
+
+![The Git Commit Workflow](../fig/git-committing.svg)
+
+---
+
+## Let's do it...
+
 Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 
@@ -759,3 +767,12 @@ that by telling Git to show you more information about your last
 commits:
 
 [commit-messages]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
+---
+
+## Summary
+
+- `git status` shows the status of a repository.
+- Files can be stored in a project's working directory, the staging area and the local repository.
+- `git add` puts files in the staging area.
+- `git commit` saves the staged content as a new commit in the local repository.
