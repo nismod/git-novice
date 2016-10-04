@@ -14,7 +14,7 @@ Keypoints:
 - Git flow is one way to organise multiple modellers who collaborate on a code base
 ---
 
-![Slack](https://a.slack-edge.com/66f9/img/brand/logos_00.png)
+![Slack](../fig/slack_cmyk.eps)
 
 ???
 ---
