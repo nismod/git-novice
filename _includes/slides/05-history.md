@@ -352,7 +352,7 @@ let her recover the last committed version of her Python script called
 
 3. `$ git checkout HEAD~1 data_cruncher.py`
 
-4. `$ git checkout <unique ID of last commitdata_cruncher.py`
+4. `$ git checkout <unique ID of last commit> data_cruncher.py`
 
 5. Both 2 and 4
 
@@ -381,7 +381,7 @@ Jennifer to use `git revert`, what is the missing command?
 
 ## Understanding Workflow and History
 
-What is the output of cat venus.txt at the end of this set of commands?
+What is the output of `$ cat venus.txt` at the end of this set of commands?
 
 ```bash
 $ cd planets
@@ -461,3 +461,9 @@ Question: What does the following command do?
 $ git log --patch HEAD~3 HEAD~1 *.txt
 ```
 
+---
+
+## Summary
+
+- `git diff` displays differences between commits.
+- `git checkout` recovers old versions of files.

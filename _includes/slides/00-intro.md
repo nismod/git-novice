@@ -6,6 +6,8 @@ class: middle, center
 
 Tom Russell & Will Usher
 
+ITRC-MISTRAL Induction Workshop - 7th October 2016
+
 ---
 
 # Agenda
@@ -20,3 +22,23 @@ Tom Russell & Will Usher
 1. Collaborating
 1. Conflicting changes
 1. Communication
+
+---
+
+# Resources
+
+These slides are available from:
+  https://nismod.github.io/git-novice/presentation/
+
+Further resources are available from the website:
+  https://nismod.github.io/git-novice/
+
+# Syntax
+
+```bash
+$ the dollar sign means this is a command to type in
+```
+
+```bash
+this is an output as there is no dollar sign
+```
