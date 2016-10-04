@@ -60,19 +60,19 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 Pick a text editor to use (we'll use `nano` for the rest of this presentation):
 
-| Command-line editors | Configuration command                            |
+| Command-line editors | Configuration command                          |
 |:-------------------|:-------------------------------------------------|
+| Notepad            | `$ git config --global core.editor notepad`
 | nano               | `$ git config --global core.editor "nano -w"`    |
 | vim                | `$ git config --global core.editor "vim"`        |
-
 
 | Graphical editors  | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
 | Atom               | `$ git config --global core.editor "atom --wait"`|
 | Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
-| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
+| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'C:\Program files\sublime text 3\sublime_text.exe' -w"` |
 | Visual Studio Code (Win)   | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
-| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
+| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'C:\Program files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 
 
 ???
