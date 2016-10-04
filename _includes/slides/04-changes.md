@@ -16,6 +16,18 @@ Keypoints:
 
 ---
 
+## Here's what we are going to do...
+
+![The Git Commit Workflow](../fig/git-staging-area.svg)
+
+1.   Create a file
+2.   `git add` to stage the file
+3.   `git commit` to commit to the repository
+
+---
+
+## Let's do it...
+
 Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 
@@ -26,7 +38,7 @@ $ nano mars.txt
 Type the text below into the `mars.txt` file:
 
 ```
-Cold and dry, but everything is my favorite color
+Cold and dry, but everything is my favorite colour
 ```
 
 ???
@@ -59,7 +71,7 @@ $ cat mars.txt
 --
 
 ```
-Cold and dry, but everything is my favorite color
+Cold and dry, but everything is my favorite colour
 ```
 
 ---
@@ -229,7 +241,7 @@ $ cat mars.txt
 --
 
 ```
-Cold and dry, but everything is my favorite color
+Cold and dry, but everything is my favorite colour
 The two moons may be a problem for werewolves
 ```
 
@@ -284,7 +296,7 @@ index df0654a..315bf3a 100644
 --- a/mars.txt
 +++ b/mars.txt
 @@ -1 +1,2 @@
- Cold and dry, but everything is my favorite color
+ Cold and dry, but everything is my favorite colour
 +The two moons may be a problem for Wolfman
 ```
 
@@ -383,7 +395,7 @@ $ cat mars.txt
 ```
 
 ```
-Cold and dry, but everything is my favorite color
+Cold and dry, but everything is my favorite colour
 The two moons may be a problem for werewolves
 But the Mummy will appreciate the lack of humidity
 ```
@@ -404,7 +416,7 @@ index 315bf3a..b36abfd 100644
 --- a/mars.txt
 +++ b/mars.txt
 @@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
+ Cold and dry, but everything is my favorite colour
  The two moons may be a problem for werewolves
 +But the Mummy will appreciate the lack of humidity
 ```
@@ -439,7 +451,7 @@ index 315bf3a..b36abfd 100644
 --- a/mars.txt
 +++ b/mars.txt
 @@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
+ Cold and dry, but everything is my favorite colour
  The two moons may be a problem for werewolves
 +But the Mummy will appreciate the lack of humidity
 ```
@@ -759,3 +771,12 @@ that by telling Git to show you more information about your last
 commits:
 
 [commit-messages]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
+---
+
+## Summary
+
+- `git status` shows the status of a repository.
+- Files can be stored in a project's working directory, the staging area and the local repository.
+- `git add` puts files in the staging area.
+- `git commit` saves the staged content as a new commit in the local repository.

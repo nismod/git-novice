@@ -381,7 +381,7 @@ Jennifer to use `git revert`, what is the missing command?
 
 ## Understanding Workflow and History
 
-What is the output of cat venus.txt at the end of this set of commands?
+What is the output of `$ cat venus.txt` at the end of this set of commands?
 
 ```bash
 $ cd planets
@@ -461,3 +461,9 @@ Question: What does the following command do?
 $ git log --patch HEAD~3 HEAD~1 *.txt
 ```
 
+---
+
+## Summary
+
+- `git diff` displays differences between commits.
+- `git checkout` recovers old versions of files.

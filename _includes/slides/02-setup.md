@@ -23,7 +23,8 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 $ git config --global color.ui "auto"
 ```
 
-Please use your own name and email address instead of Dracula's.
+* Please use your own name and email address instead of Dracula's
+* This should be the same e-mail you used to sign up to Github
 
 ???
 
@@ -60,11 +61,19 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 Pick a text editor to use (we'll use `nano` for the rest of this presentation):
 
-| Editor             | Configuration command                            |
+| Command-line editors | Configuration command                          |
 |:-------------------|:-------------------------------------------------|
-| notepad            | `$ git config --global core.editor "notepad"`    |
+| Notepad            | `$ git config --global core.editor notepad`
 | nano               | `$ git config --global core.editor "nano -w"`    |
 | vim                | `$ git config --global core.editor "vim"`        |
+
+| Graphical editors  | Configuration command                            |
+|:-------------------|:-------------------------------------------------|
+| Atom               | `$ git config --global core.editor "atom --wait"`|
+| Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
+| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'C:\Program files\sublime text 3\sublime_text.exe' -w"` |
+| Visual Studio Code (Win)   | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
+| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'C:\Program files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 
 
 ???
@@ -108,3 +117,10 @@ $ git config --help
 Always remember that if you forget a git command, you can access the list of command by using -h and access the git manual by using --help :
 
 [git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
+
+---
+
+## Summary
+
+* Use `git config` to setup configuration before using git on a new computer
+* You only need to do this once

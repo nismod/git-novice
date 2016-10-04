@@ -16,9 +16,16 @@ Keypoints:
 
 ---
 
-Version control really comes into its own when we begin to collaborate with
-other people.  We already have most of the machinery we need to do this; the
+## Collaborating using Github
+
+- Version control is really great to collaborate with other people.  
+
+We already have most of the machinery we need to do this; the
 only thing missing is to copy changes from one repository to another.
+
+- [GitHub](http://github.com) is used as a central hub for collaboration using Git.
+
+???
 
 Systems like Git allow us to move work between any two repositories.  In
 practice, though, it's easiest to use one copy as a central hub, and to keep it
@@ -29,9 +36,11 @@ and cons of this in the final section of this lesson.
 
 ---
 
-Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
-create a new repository called `planets`:
+## Share our current project with the world
+
+* Log in to GitHub,
+* click on the icon in the top right corner to
+create a new repository called `planets`
 
 ![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
 
@@ -57,6 +66,7 @@ $ mkdir planets
 $ cd planets
 $ git init
 ```
+---
 
 Our local repository still contains our earlier work on `mars.txt`, but the
 remote repository on GitHub doesn't contain any files yet:
@@ -74,8 +84,6 @@ identify it:
 
 Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
 SSH to HTTPS.
-
----
 
 ## HTTPS vs. SSH
 
@@ -137,7 +145,7 @@ To https://github.com/vlad/planets
 Branch master set up to track remote branch master from origin.
 ```
 
----
+???
 
 ## Password Managers
 
@@ -158,7 +166,7 @@ you may want to unset `SSH_ASKPASS` whether you are using git via SSH or
 https.
 
 You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
-to make git default to using the terminal for usernames and passwords.
+to make git default to using the terminal for usernames and passwords. -->
 
 ---
 
@@ -166,7 +174,7 @@ Our local and remote repositories are now in this state:
 
 ![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
 
----
+???
 
 ## The '-u' Flag
 
@@ -194,17 +202,35 @@ GitHub, though, this command would download them to our local repository.
 
 ---
 
-## GitHub GUI
+## Practice: GitHub GUI
 
-Browse to your `planets` repository on GitHub.
-Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
-Hover over, and click on, the three buttons to the right of each commit.
-What information can you gather/explore from these buttons?
-How would you get that same information in the shell?
+Logs:
+
+* Browse to your `planets` repository on GitHub.
+* Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
+* Hover over, and click on, the three buttons to the right of each commit.
+* What information can you gather/explore from these buttons?
+* How would you get that same information in the shell?
+
+Graphs:
+
+* Click on the Graphs | Network tab
+* What does it show?
+* Hover your mouse over the dots?  What is displayed?
+* Click a dot on the network graph.  What information is shown?
 
 ---
 
-## GitHub Timestamp
+## Summary
+
+- A local Git repository can be connected to one or more remote repositories.
+- Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.
+- `git push` copies changes from a local repository to a remote repository.
+- `git pull` copies changes from a remote repository to a local repository.
+
+---
+
+## Practice: GitHub Timestamp
 
 Create a remote repository on GitHub.  Push the contents of your local
 repository to the remote.  Make changes to your local repository and push
@@ -214,7 +240,7 @@ times, and why?
 
 ---
 
-## Push vs. Commit
+## Discuss: Push vs. Commit
 
 In this lesson, we introduced the "git push" command.
 How is "git push" different from "git commit"?
@@ -222,10 +248,10 @@ How is "git push" different from "git commit"?
 
 ---
 
-## Fixing Remote Settings
+## Exercise: Fixing Remote Settings
 
 It happens quite often in practice that you made a typo in the
-remote URL. This exercice is about how to fix this kind of issues.
+remote URL. This exercise is about how to fix this kind of issue.
 First start by adding a remote with an invalid URL:
 
 ```bash
@@ -240,7 +266,7 @@ done with this exercise.
 
 ---
 
-## GitHub License and README files
+## Discuss: GitHub License and README files
 
 In this section we learned about creating a remote repository on GitHub, but when you initialized your
 GitHub repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when

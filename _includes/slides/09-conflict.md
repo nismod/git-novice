@@ -14,13 +14,12 @@ Keypoints:
 
 ---
 
-As soon as people can work in parallel, it's likely someone's going to step on someone
-else's toes.  This will even happen with a single person: if we are working on
-a piece of software on both our laptop and a server in the lab, we could make
-different changes to each copy.  Version control helps us manage these
+## Resolving conflicts
+
+* Conflicts occur when two or more people change the same file(s) at the same time
+* Version control helps us manage
 [conflicts]({{ page.root }}/reference/#conflicts) by giving us tools to
 [resolve]({{ page.root }}/reference/#resolve) overlapping changes.
-
 
 To see how we can resolve conflicts, we must first create one.  The file
 `mars.txt` currently looks like this in both partners' copies of our `planets`
@@ -35,6 +34,12 @@ Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 ```
+???
+
+As soon as people can work in parallel, it's likely someone's going to step on someone
+else's toes.  This will even happen with a single person: if we are working on
+a piece of software on both our laptop and a server in the lab, we could make
+different changes to each copy.  
 
 ---
 
@@ -168,6 +173,8 @@ and marks that conflict in the affected file:
 $ cat mars.txt
 ```
 
+The file contents reads like this:
+
 ```
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
@@ -179,13 +186,13 @@ This line added to Wolfman's copy
 >>>>>>dabb4c8c450e8475aee9b14b4383acc99f42af1d
 ```
 
----
-
 Our change—the one in `HEAD`—is preceded by `<<<<<<<`.
 Git has then inserted `=======` as a separator between the conflicting changes
 and marked the end of the content downloaded from GitHub with `>>>>>>>`.
 (The string of letters and digits after that marker
 identifies the commit we've just downloaded.)
+
+---
 
 It is now up to us to edit this file to remove these markers
 and reconcile the changes.
@@ -304,26 +311,9 @@ the version control system is essentially trying to tell its users
 that they ought to clarify who's responsible for what,
 or find a way to divide the work up differently.
 
-
-## Solving Conflicts that You Create
-
-Clone the repository created by your instructor.
-Add a new file to it,
-and modify an existing file (your instructor will tell you which one).
-When asked by your instructor,
-pull her changes from the repository to create a conflict,
-then resolve it.
-
-
-## Conflicts on Non-textual files
-
-What does Git do
-when there is a conflict in an image or some other non-textual file
-that is stored in version control?
-
 ---
 
-## A Typical Work Session
+## Exercise: A Typical Work Session
 
 You sit down at your computer to work on a shared project that is tracked in a
 remote Git repository. During your work session, you take the following
@@ -338,3 +328,31 @@ actions, but not in this order:
 
 In what order should you perform these actions to minimize the chances of
 conflicts?
+
+---
+
+## Summary
+
+- Conflicts occur when two or more people change the same file(s) at the same time.
+- The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved.
+
+---
+
+## Exercise: Solving Conflicts that You Create
+
+Clone the repository created by your instructor.
+Add a new file to it,
+and modify an existing file (your instructor will tell you which one).
+When asked by your instructor,
+pull her changes from the repository to create a conflict,
+then resolve it.
+
+---
+
+## Exercise: Conflicts on Non-textual files
+
+What does Git do
+when there is a conflict in an image or some other non-textual file
+that is stored in version control?
+
+---

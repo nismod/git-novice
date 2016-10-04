@@ -255,3 +255,11 @@ You want to keep them but you do not want to track them through `git`.
 
 1. append either `log_*`  or  `log*`  as a new entry in your .gitignore
 3. track `log_01` using   `git add -f log_01`
+
+---
+
+## Summary
+
+- Do use version control for all your source code
+- Don't include data or generated files
+- The `.gitignore` file tells Git what files to ignore
