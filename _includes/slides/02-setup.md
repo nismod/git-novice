@@ -92,6 +92,27 @@ same commands to choose another editor or update your email address.
 
 ---
 
+## Line endings
+
+Windows and Mac/Linux handle line endings differently, and we want to be able to
+share files between operating systems.
+
+Git has a setting that _should_ let us set a sensible default.
+
+On Windows, set it to `true`:
+
+```bash
+git config --global core.autocrlf true
+```
+
+On Mac or Linux, set it to `input`:
+
+```bash
+git config --global core.autocrlf input
+```
+
+---
+
 ## Checking config
 
 You can check your settings at any time:
