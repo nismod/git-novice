@@ -340,6 +340,47 @@ moving backward and forward in time becomes much easier.
 
 ---
 
+## Explore and Summarize Histories
+
+Recorded that the `git diff` command allow us to explore one specific file,
+e.g. `git diff mars.txt`. We can apply the similar idea here.
+
+```bash
+git log mars.txt
+```
+
+--
+
+Both `git diff` and `git log` are very useful and they summarize different part of the history for you.
+Is that possible to combine both? Let's try the following:
+
+```bash
+git log --patch mars.txt
+```
+
+--
+
+You should get a long list of output, and you should be able to see both commit
+messages and the difference between each commit.
+
+Question: What does the following command do?
+
+```bash
+git log --patch HEAD~3 HEAD~1 *.txt
+```
+
+???
+
+Exploring history is an important part of git, often it is a challenge to find
+the right commit ID, especially if the commit is from several months ago.
+
+Imaging the `planets` project has more than 50 files.
+You would like to find a commit with specific text in `mars.txt` is modified.
+When you type `git log`, a very long list appeared,
+How can you narrow down the search?
+
+---
+
 ## Exercise: Recovering Older Versions of a File
 
 Jennifer has made changes to the Python script that she has been working on for weeks, and the
@@ -423,47 +464,6 @@ Make a change to `mars.txt`, `git add` that change, and use `git checkout` to se
 you can remove your change.
 
 (Hint: read the output of `git status` after you've staged the change)
-
----
-
-## Explore and Summarize Histories
-
-Recorded that the `git diff` command allow us to explore one specific file,
-e.g. `git diff mars.txt`. We can apply the similar idea here.
-
-```bash
-git log mars.txt
-```
-
---
-
-Both `git diff` and `git log` are very useful and they summarize different part of the history for you.
-Is that possible to combine both? Let's try the following:
-
-```bash
-git log --patch mars.txt
-```
-
---
-
-You should get a long list of output, and you should be able to see both commit
-messages and the difference between each commit.
-
-Question: What does the following command do?
-
-```bash
-git log --patch HEAD~3 HEAD~1 *.txt
-```
-
-???
-
-Exploring history is an important part of git, often it is a challenge to find
-the right commit ID, especially if the commit is from several months ago.
-
-Imaging the `planets` project has more than 50 files.
-You would like to find a commit with specific text in `mars.txt` is modified.
-When you type `git log`, a very long list appeared,
-How can you narrow down the search?
 
 ---
 
