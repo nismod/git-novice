@@ -131,7 +131,7 @@ How can we undo the last `git init`?
 
 The commands above make the following directory structure:
 
-```bash
+```
 ~/planets/
 ~/planets/.git
 ~/planets/moons
