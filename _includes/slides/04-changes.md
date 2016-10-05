@@ -141,8 +141,19 @@ but it hasn't recorded these changes as a commit yet.
 Then we can record these changes as a commit:
 
 ```bash
-git commit -m "Start notes on Mars as a base"
+git commit
 ```
+
+This should open the text editor we configured earlier.
+
+Type a commit message:
+
+```
+Start notes on Mars as a base
+```
+
+
+Then save it, and close the message file in the editor.
 
 --
 
@@ -333,6 +344,9 @@ git commit -m "Add concerns about effects of Mars' moons on werewolves"
 git status
 ```
 
+Note: `git commit -m` lets us write a short message for the commit right on the
+command line, without opening a separate text editor.
+
 --
 
 ```
@@ -386,8 +400,8 @@ but not yet committed.
 
 ---
 
-Let's run through the process again, from (1) the working directory to (2) the
-staging area, to (3) commiting.
+Let's run through the process again, from (1) making a change in the working
+directory to (2) the staging area, to (3) commiting.
 
 ```bash
 notepad mars.txt
@@ -736,7 +750,7 @@ Venus is a nice planet and I definitely should consider it as a base.
 
 Now you can add both files to the staging area. We can do that in one line:
 
-```
+```bash
 git add mars.txt venus.txt
 ```
 
@@ -754,6 +768,8 @@ Now the files are ready to commit. You can check that using `git status`. If you
 ```bash
 git commit -m "Wrote down my plans to start a base on Venus"
 ```
+
+--
 
 ```
 [master cc127c2]
