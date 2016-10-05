@@ -119,6 +119,17 @@ the same files concurrently.
 
 ---
 
+## Exercise: System of Systems National Infrastructure Model
+
+*   Imagine you're part of a consortium of several universities, as part of a
+    research project to model national infrastructure systems over the next
+    50-100 years. How would you approach developing a suite of models in
+    parallel?
+*   How might a history of the development process be useful?
+*   How could you manage the development and integration of various models?
+
+---
+
 ## Summary
 
 Two main concepts:
