@@ -32,7 +32,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 
 ```bash
-$ nano mars.txt
+nano mars.txt
 ```
 
 Type the text below into the `mars.txt` file:
@@ -53,7 +53,7 @@ In particular, this does not have to be the `core.editor` you set globally earli
 `mars.txt` now contains a single line, which we can see by running:
 
 ```bash
-$ ls
+ls
 ```
 
 --
@@ -65,7 +65,7 @@ mars.txt
 --
 
 ```bash
-$ cat mars.txt
+cat mars.txt
 ```
 
 --
@@ -80,7 +80,7 @@ If we check the status of our project again,
 Git tells us that it's noticed the new file:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -107,13 +107,13 @@ that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
 ```bash
-$ git add mars.txt
+git add mars.txt
 ```
 
 and then check that the right thing happened:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -141,7 +141,7 @@ but it hasn't recorded these changes as a commit yet.
 Then we can record these changes as a commit:
 
 ```bash
-$ git commit -m "Start notes on Mars as a base"
+git commit -m "Start notes on Mars as a base"
 ```
 
 --
@@ -157,7 +157,7 @@ $ git commit -m "Start notes on Mars as a base"
 If we run `git status` now:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -196,8 +196,8 @@ it tells us everything is up to date.
 If we want to know what we've done recently,
 we can ask Git to show us the project's history using `git log`:
 
-```
-$ git log
+```bash
+git log
 ```
 
 --
@@ -233,9 +233,9 @@ so that our filesystem doesn't become cluttered
 
 Now suppose Dracula adds more information to the file.
 
-```
-$ nano mars.txt
-$ cat mars.txt
+```bash
+nano mars.txt
+cat mars.txt
 ```
 
 --
@@ -250,8 +250,8 @@ The two moons may be a problem for werewolves
 When we run `git status` now,
 it tells us that a file it already knows about has been modified:
 
-```
-$ git status
+```bash
+git status
 ```
 
 --
@@ -284,8 +284,8 @@ So let's do that now.
 
 What changed?
 
-```
-$ git diff
+```bash
+git diff
 ```
 
 --
@@ -329,8 +329,8 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 ```bash
-$ git commit -m "Add concerns about effects of Mars' moons on werewolves"
-$ git status
+git commit -m "Add concerns about effects of Mars' moons on werewolves"
+git status
 ```
 
 --
@@ -353,8 +353,8 @@ Whoops! Git won't commit because we didn't use `git add` first.
 --
 
 ```bash
-$ git add mars.txt
-$ git commit -m "Add concerns about effects of Mars' moons on werewolves"
+git add mars.txt
+git commit -m "Add concerns about effects of Mars' moons on werewolves"
 ```
 
 --
@@ -389,9 +389,9 @@ but not yet committed.
 Let's run through the process again, from (1) the working directory to (2) the
 staging area, to (3) commiting.
 
-```
-$ nano mars.txt
-$ cat mars.txt
+```bash
+nano mars.txt
+cat mars.txt
 ```
 
 ```
@@ -404,8 +404,8 @@ But the Mummy will appreciate the lack of humidity
 
 What changed?
 
-```
-$ git diff
+```bash
+git diff
 ```
 
 --
@@ -426,8 +426,8 @@ index 315bf3a..b36abfd 100644
 Add our change to the staging area:
 
 ```bash
-$ git add mars.txt
-$ git diff
+git add mars.txt
+git diff
 ```
 
 --
@@ -440,7 +440,7 @@ What's the difference between the staging area and what has already been
 committed?
 
 ```bash
-$ git diff --staged
+git diff --staged
 ```
 
 --
@@ -506,7 +506,7 @@ and what's in the staging area.
 And finally, committing:
 
 ```bash
-$ git commit -m "Discuss concerns about Mars' climate for Mummy"
+git commit -m "Discuss concerns about Mars' climate for Mummy"
 ```
 
 --
@@ -521,7 +521,7 @@ $ git commit -m "Discuss concerns about Mars' climate for Mummy"
 Check our status:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -540,7 +540,7 @@ All done!
 To look at the history of what we've done so far:
 
 ```bash
-$ git log
+git log
 ```
 
 --
@@ -583,8 +583,8 @@ screen is a `:`, instead of your usual prompt.
 
 To look at the latest commit:
 
-```
-$ git log -1
+```bash
+git log -1
 ```
 
 --
@@ -611,8 +611,8 @@ from the last commit you can use
 
 Or ask for less information:
 
-```
-$ git log --oneline
+```bash
+git log --oneline
 ```
 
 --
@@ -627,8 +627,8 @@ $ git log --oneline
 
 Or try lots more options:
 
-```
-$ git log --oneline --graph --all --decorate
+```bash
+git log --oneline --graph --all --decorate
 ```
 
 ```
@@ -684,10 +684,10 @@ details can be written as necessary.
 ## Exercise: Committing Changes to Git
 Which command(s) below would save the changes of `myfile.txt`
 to my local Git repository?
-1. `$ git commit -m "my recent changes"`
-2. `$ git init myfile.txt`<br>`$ git commit -m "my recent changes"`
-3. `$ git add myfile.txt`<br>`$ git commit -m "my recent changes"`
-4. `$ git commit -m myfile.txt "my recent changes"`
+1. `git commit -m "my recent changes"`
+2. `git init myfile.txt`<br>`git commit -m "my recent changes"`
+3. `git add myfile.txt`<br>`git commit -m "my recent changes"`
+4. `git commit -m myfile.txt "my recent changes"`
 
 --
 
@@ -714,18 +714,18 @@ and commit those changes.
 
 ## Solution
 
-```
-$ nano mars.txt
-$ cat mars.txt
+```bash
+nano mars.txt
+cat mars.txt
 ```
 
 ```
 Maybe I should start with a base on Venus.
 ```
 
-```
-$ nano venus.txt
-$ cat venus.txt
+```bash
+nano venus.txt
+cat venus.txt
 ```
 
 ```
@@ -737,22 +737,22 @@ Venus is a nice planet and I definitely should consider it as a base.
 Now you can add both files to the staging area. We can do that in one line:
 
 ```
-$ git add mars.txt venus.txt
+git add mars.txt venus.txt
 ```
 
 Or with multiple commands:
 
-```
-$ git add mars.txt
-$ git add venus.txt
+```bash
+git add mars.txt
+git add venus.txt
 ```
 
 --
 
 Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
 
-```
-$ git commit -m "Wrote down my plans to start a base on Venus"
+```bash
+git commit -m "Wrote down my plans to start a base on Venus"
 ```
 
 ```

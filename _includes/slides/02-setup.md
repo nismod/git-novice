@@ -18,9 +18,9 @@ Keypoints:
 So here is how Dracula sets up his new laptop:
 
 ```bash
-$ git config --global user.name "Vlad Dracula"
-$ git config --global user.email "vlad@tran.sylvan.ia"
-$ git config --global color.ui "auto"
+git config --global user.name "Vlad Dracula"
+git config --global user.email "vlad@tran.sylvan.ia"
+git config --global color.ui "auto"
 ```
 
 * Please use your own name and email address instead of Dracula's
@@ -63,17 +63,17 @@ Pick a text editor to use (we'll use `nano` for the rest of this presentation):
 
 | Command-line editors | Configuration command                          |
 |:-------------------|:-------------------------------------------------|
-| Notepad            | `$ git config --global core.editor notepad`
-| nano               | `$ git config --global core.editor "nano -w"`    |
-| vim                | `$ git config --global core.editor "vim"`        |
+| Notepad            | `git config --global core.editor notepad`
+| nano               | `git config --global core.editor "nano -w"`    |
+| vim                | `git config --global core.editor "vim"`        |
 
 | Graphical editors  | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
-| Atom               | `$ git config --global core.editor "atom --wait"`|
-| Sublime Text (Mac) | `$ git config --global core.editor "subl -n -w"` |
-| Sublime Text (Win, 64-bit) | `$ git config --global core.editor "'C:\Program files\sublime text 3\sublime_text.exe' -w"` |
-| Visual Studio Code (Win)   | `$ git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
-| Notepad++ (Win, 64-bit)    | `$ git config --global core.editor "'C:\Program files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
+| Atom               | `git config --global core.editor "atom --wait"`|
+| Sublime Text (Mac) | `git config --global core.editor "subl -n -w"` |
+| Sublime Text (Win, 64-bit) | `git config --global core.editor "'C:\Program files\sublime text 3\sublime_text.exe' -w"` |
+| Visual Studio Code (Win)   | `git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\bin\code' --wait"` |
+| Notepad++ (Win, 64-bit)    | `git config --global core.editor "'C:\Program files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 
 
 ???
@@ -97,14 +97,14 @@ same commands to choose another editor or update your email address.
 You can check your settings at any time:
 
 ```bash
-$ git config --list
+git config --list
 ```
 
 ## Git Help and Manual
 
 ```bash
-$ git config -h
-$ git config --help
+git config -h
+git config --help
 ```
 
 [Git Docs](https://git-scm.com/doc)

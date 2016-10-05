@@ -18,7 +18,7 @@ Keypoints:
 
 ## Collaborating using Github
 
-- Version control is really great to collaborate with other people.  
+- Version control is really great to collaborate with other people.
 
 We already have most of the machinery we need to do this; the
 only thing missing is to copy changes from one repository to another.
@@ -62,9 +62,9 @@ information on how to configure your local repository:
 This effectively does the following on GitHub's servers:
 
 ```bash
-$ mkdir planets
-$ cd planets
-$ git init
+mkdir planets
+cd planets
+git init
 ```
 ---
 
@@ -103,7 +103,7 @@ Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ```bash
-$ git remote add origin https://github.com/vlad/planets.git
+git remote add origin https://github.com/vlad/planets.git
 ```
 
 Make sure to use the URL for your repository rather than Vlad's: the only
@@ -113,9 +113,11 @@ difference should be your username instead of `vlad`.
 
 We can check that the command has worked by running `git remote -v`:
 
+```bash
+git remote -v
 ```
-$ git remote -v
-```
+
+--
 
 ```
 origin   https://github.com/vlad/planets.git (push)
@@ -130,9 +132,11 @@ something else if we wanted to, but `origin` is by far the most common choice.
 Once the nickname `origin` is set up, this command will push the changes from
 our local repository to the repository on GitHub:
 
+```bash
+git push origin master
 ```
-$ git push origin master
-```
+
+--
 
 ```
 Counting objects: 9, done.
@@ -155,8 +159,8 @@ is the default behavior for Git Bash on Windows. If you want to type your
 username and password at the terminal instead of using a password manager,
 type:
 
-```
-$ unset SSH_ASKPASS
+```bash
+unset SSH_ASKPASS
 ```
 
 in the terminal, before you run `git push`.  Despite the name, [git uses
@@ -186,9 +190,11 @@ ignored for now.
 
 We can pull changes from the remote repository to the local one as well:
 
+```bash
+git pull origin master
 ```
-$ git pull origin master
-```
+
+--
 
 ```
 From https://github.com/vlad/planets
@@ -207,7 +213,7 @@ GitHub, though, this command would download them to our local repository.
 Logs:
 
 * Browse to your `planets` repository on GitHub.
-* Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
+* Under the Code tab, find and click on the text that says "3 commits" (where "3" might be a different number!).
 * Hover over, and click on, the three buttons to the right of each commit.
 * What information can you gather/explore from these buttons?
 * How would you get that same information in the shell?
@@ -221,29 +227,23 @@ Graphs:
 
 ---
 
-## Summary
-
-- A local Git repository can be connected to one or more remote repositories.
-- Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.
-- `git push` copies changes from a local repository to a remote repository.
-- `git pull` copies changes from a remote repository to a local repository.
-
----
-
 ## Practice: GitHub Timestamp
 
 Create a remote repository on GitHub.  Push the contents of your local
 repository to the remote.  Make changes to your local repository and push
-these changes.  Go to the repo you just created on Github and check the
-[timestamps]({{ page.root }}/reference/#timestamp) of the files.  How does GitHub record
-times, and why?
+these changes.
+
+Go to the repo you just created on Github and check the
+[timestamps]({{ page.root }}/reference/#timestamp) of the files.
+
+How does GitHub record times, and why?
 
 ---
 
 ## Discuss: Push vs. Commit
 
-In this lesson, we introduced the "git push" command.
-How is "git push" different from "git commit"?
+In this lesson, we introduced the `git push` command.
+How is `git push` different from `git commit`?
 
 
 ---
@@ -268,6 +268,19 @@ done with this exercise.
 
 ## Discuss: GitHub License and README files
 
-In this section we learned about creating a remote repository on GitHub, but when you initialized your
-GitHub repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when
-you tried to link your local and remote repositories?
+In this section we learned about creating a remote repository on GitHub, but
+when you initialized your GitHub repo, you didn't add a README.md or a license
+file.
+
+If you had, what do you think would have happened when you tried to link your
+local and remote repositories?
+
+---
+
+## Summary
+
+- A local Git repository can be connected to one or more remote repositories.
+- Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.
+- `git push` copies changes from a local repository to a remote repository.
+- `git pull` copies changes from a remote repository to a local repository.
+

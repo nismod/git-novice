@@ -26,7 +26,7 @@ To see how we can resolve conflicts, we must first create one.  The file
 repository:
 
 ```bash
-$ cat mars.txt
+cat mars.txt
 ```
 
 ```
@@ -39,15 +39,15 @@ But the Mummy will appreciate the lack of humidity
 As soon as people can work in parallel, it's likely someone's going to step on someone
 else's toes.  This will even happen with a single person: if we are working on
 a piece of software on both our laptop and a server in the lab, we could make
-different changes to each copy.  
+different changes to each copy.
 
 ---
 
 Let's add a line to one partner's copy only:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
+nano mars.txt
+cat mars.txt
 ```
 
 ```
@@ -62,18 +62,24 @@ This line added to Wolfman's copy
 and then push the change to GitHub:
 
 ```bash
-$ git add mars.txt
-$ git commit -m "Adding a line in our home copy"
+git add mars.txt
+git commit -m "Adding a line in our home copy"
 ```
+
+--
 
 ```
 [master 5ae9631] Adding a line in our home copy
  1 file changed, 1 insertion(+)
 ```
 
+--
+
 ```bash
-$ git push origin master
+git push origin master
 ```
+
+--
 
 ```
 Counting objects: 5, done.
@@ -92,8 +98,8 @@ make a different change to their copy
 *without* updating from GitHub:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
+notepad mars.txt
+cat mars.txt
 ```
 
 ```
@@ -108,21 +114,26 @@ We added a different line in the other copy
 We can commit the change locally:
 
 ```bash
-$ git add mars.txt
-$ git commit -m "Adding a line in my copy"
+git add mars.txt
+git commit -m "Adding a line in my copy"
 ```
+
+--
 
 ```
 [master 07ebc69] Adding a line in my copy
  1 file changed, 1 insertion(+)
 ```
 
+--
+
 but Git won't let us push it to GitHub:
 
 ```bash
-$ git push origin master
+git push origin master
 ```
 
+--
 
 ```
 To https://github.com/vlad/planets.git
@@ -149,8 +160,10 @@ and then push that.
 Let's start by pulling:
 
 ```bash
-$ git pull origin master
+git pull origin master
 ```
+
+--
 
 ```
 remote: Counting objects: 5, done.
@@ -170,7 +183,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 and marks that conflict in the affected file:
 
 ```bash
-$ cat mars.txt
+cat mars.txt
 ```
 
 The file contents reads like this:
@@ -186,23 +199,23 @@ This line added to Wolfman's copy
 >>>>>>dabb4c8c450e8475aee9b14b4383acc99f42af1d
 ```
 
+--
+
 Our change—the one in `HEAD`—is preceded by `<<<<<<<`.
-Git has then inserted `=======` as a separator between the conflicting changes
-and marked the end of the content downloaded from GitHub with `>>>>>>>`.
+
+Git inserted a separator between the conflicting changes: `=======`
+
+The end of the content downloaded from GitHub with `>>>>>>>`.
+
 (The string of letters and digits after that marker
 identifies the commit we've just downloaded.)
 
 ---
 
-It is now up to us to edit this file to remove these markers
-and reconcile the changes.
-We can do anything we want: keep the change made in the local repository, keep
-the change made in the remote repository, write something new to replace both,
-or get rid of the change entirely.
-Let's replace both so that the file looks like this:
+We can decide exactly how to resolve the conflicting changes:
 
 ```bash
-$ cat mars.txt
+cat mars.txt
 ```
 
 ```
@@ -212,6 +225,15 @@ But the Mummy will appreciate the lack of humidity
 We removed the conflict on this line
 ```
 
+???
+
+It is now up to us to edit this file to remove these markers
+and reconcile the changes.
+We can do anything we want: keep the change made in the local repository, keep
+the change made in the remote repository, write something new to replace both,
+or get rid of the change entirely.
+Let's replace both so that the file looks like this.
+
 ---
 
 To finish merging,
@@ -219,9 +241,11 @@ we add `mars.txt` to the changes being made by the merge
 and then commit:
 
 ```bash
-$ git add mars.txt
-$ git status
+git add mars.txt
+git status
 ```
+
+--
 
 ```
 On branch master
@@ -231,12 +255,15 @@ All conflicts fixed but you are still merging.
 Changes to be committed:
 
 	modified:   mars.txt
-
 ```
+
+--
 
 ```bash
-$ git commit -m "Merging changes from GitHub"
+git commit -m "Merging changes from GitHub"
 ```
+
+--
 
 ```
 [master 2abf2b1] Merging changes from GitHub
@@ -247,7 +274,7 @@ $ git commit -m "Merging changes from GitHub"
 Now we can push our changes to GitHub:
 
 ```bash
-$ git push origin master
+git push origin master
 ```
 
 ```
@@ -267,7 +294,7 @@ so we don't have to fix things by hand again
 when the collaborator who made the first change pulls again:
 
 ```bash
-$ git pull origin master
+git pull origin master
 ```
 
 ```
@@ -288,7 +315,7 @@ Fast-forward
 We get the merged file:
 
 ```bash
-$ cat mars.txt
+cat mars.txt
 ```
 
 ```
@@ -300,7 +327,7 @@ We removed the conflict on this line
 
 We don't need to merge again because Git knows someone has already done that.
 
----
+???
 
 Version control's ability to merge conflicting changes
 is another reason users tend to divide their programs and papers into multiple files
@@ -331,20 +358,15 @@ conflicts?
 
 ---
 
-## Summary
-
-- Conflicts occur when two or more people change the same file(s) at the same time.
-- The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved.
-
----
-
 ## Exercise: Solving Conflicts that You Create
 
 Clone the repository created by your instructor.
+
 Add a new file to it,
 and modify an existing file (your instructor will tell you which one).
+
 When asked by your instructor,
-pull her changes from the repository to create a conflict,
+pull their changes from the repository to create a conflict,
 then resolve it.
 
 ---
@@ -352,7 +374,14 @@ then resolve it.
 ## Exercise: Conflicts on Non-textual files
 
 What does Git do
-when there is a conflict in an image or some other non-textual file
+when there is a conflict in an image or some other non-text file
 that is stored in version control?
 
 ---
+
+## Summary
+
+- Conflicts occur when two or more people change the same file(s) at the same
+time.
+- The version control system does not allow people to overwrite each other's
+changes blindly, but highlights conflicts so that they can be resolved.

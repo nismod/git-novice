@@ -20,8 +20,8 @@ Keypoints:
 Let's make another small change:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
+nano mars.txt
+cat mars.txt
 ```
 
 ```
@@ -36,7 +36,7 @@ An ill-considered change
 What changed?
 
 ```bash
-$ git diff HEAD mars.txt
+git diff HEAD mars.txt
 ```
 
 --
@@ -70,7 +70,7 @@ which is the same as what you would get if you leave out `HEAD` (try it).
 What about looking further back in time?
 
 ```bash
-$ git diff HEAD~1 mars.txt
+git diff HEAD~1 mars.txt
 ```
 
 --
@@ -99,7 +99,7 @@ commits.
 --
 
 ```bash
-$ git diff HEAD~2 mars.txt
+git diff HEAD~2 mars.txt
 ```
 
 --
@@ -130,7 +130,7 @@ while `HEAD~123` goes back 123 commits from where we are now.
 We can refer to commits by id:
 
 ```bash
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
+git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
 ```
 
 --
@@ -151,7 +151,7 @@ index df0654a..b36abfd 100644
 Or short id:
 
 ```bash
-$ git diff f22b25e mars.txt
+git diff f22b25e mars.txt
 ```
 
 --
@@ -190,8 +190,8 @@ so Git lets us use just the first few characters.
 Let's suppose we accidentally overwrite our file:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
+nano mars.txt
+cat mars.txt
 ```
 
 ```
@@ -204,7 +204,7 @@ We will need to manufacture our own oxygen
 but those changes haven't been staged:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -232,8 +232,8 @@ We can put things back the way they were
 by using `git checkout`:
 
 ```bash
-$ git checkout HEAD mars.txt
-$ cat mars.txt
+git checkout HEAD mars.txt
+cat mars.txt
 ```
 
 --
@@ -247,7 +247,7 @@ But the Mummy will appreciate the lack of humidity
 To go back even further, we can use a commit identifier instead:
 
 ```bash
-$ git checkout f22b25e mars.txt
+git checkout f22b25e mars.txt
 ```
 
 ???
@@ -265,7 +265,7 @@ which is the last saved commit.
 Above we used
 
 ```bash
-$ git checkout f22b25e mars.txt
+git checkout f22b25e mars.txt
 ```
 
 to revert mars.txt to its state after the commit f22b25e.
@@ -305,14 +305,16 @@ you'll see that it includes this hint:
 Try deleting a file:
 
 ```bash
-$ rm mars.txt
-$ ls
+rm mars.txt
+ls
 ```
+
+--
 
 Then put it back:
 
 ```bash
-$ git checkout -- mars.txt
+git checkout -- mars.txt
 ```
 
 ???
@@ -347,13 +349,9 @@ let her recover the last committed version of her Python script called
 `data_cruncher.py`?
 
 1. `$ git checkout HEAD`
-
 2. `$ git checkout HEAD data_cruncher.py`
-
 3. `$ git checkout HEAD~1 data_cruncher.py`
-
 4. `$ git checkout <unique ID of last commit> data_cruncher.py`
-
 5. Both 2 and 4
 
 ---
@@ -381,16 +379,16 @@ Jennifer to use `git revert`, what is the missing command?
 
 ## Understanding Workflow and History
 
-What is the output of `$ cat venus.txt` at the end of this set of commands?
+What is the output of `cat venus.txt` at the end of this set of commands?
 
 ```bash
-$ cd planets
-$ nano venus.txt #input the following text: Venus is beautiful and full of love
-$ git add venus.txt
-$ nano venus.txt #add the following text: Venus is too hot to be suitable as a base
-$ git commit -m "comments on Venus as an unsuitable base"
-$ git checkout HEAD venus.txt
-$ cat venus.txt #this will print the contents of venus.txt to the screen
+cd planets
+nano venus.txt # add text: Venus is beautiful and full of love
+git add venus.txt
+nano venus.txt # add text: Venus is too hot to be suitable as a base
+git commit -m "comments on Venus as an unsuitable base"
+git checkout HEAD venus.txt
+cat venus.txt # print the contents of venus.txt to the screen
 ```
 
 1. `Venus is too hot to be suitable as a base`
@@ -438,7 +436,7 @@ Recorded that the `git diff` command allow us to explore one specific file,
 e.g. `git diff mars.txt`. We can apply the similar idea here.
 
 ```bash
-$ git log mars.txt
+git log mars.txt
 ```
 
 ---
@@ -450,7 +448,7 @@ Both `git diff` and `git log` are very useful and they summarize different part 
 Is that possible to combine both? Let's try the following:
 
 ```bash
-$ git log --patch mars.txt
+git log --patch mars.txt
 ```
 
 You should get a long list of output, and you should be able to see both commit messages and the difference between each commit.
@@ -458,7 +456,7 @@ You should get a long list of output, and you should be able to see both commit 
 Question: What does the following command do?
 
 ```bash
-$ git log --patch HEAD~3 HEAD~1 *.txt
+git log --patch HEAD~3 HEAD~1 *.txt
 ```
 
 ---

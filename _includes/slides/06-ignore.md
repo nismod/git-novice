@@ -19,15 +19,17 @@ or intermediate files created during data analysis.
 Let's create a few dummy files:
 
 ```bash
-$ mkdir results
-$ touch a.dat b.dat c.dat results/a.out results/b.out
+mkdir results
+touch a.dat b.dat c.dat results/a.out results/b.out
 ```
 
 and see what Git says:
 
 ```bash
-$ git status
+git status
 ```
+
+--
 
 ```
 On branch master
@@ -51,9 +53,11 @@ so let's tell Git to ignore them.
 We do this by creating a file in the root directory of our project called `.gitignore`:
 
 ```bash
-$ nano .gitignore
-$ cat .gitignore
+nano .gitignore
+cat .gitignore
 ```
+
+--
 
 ```
 *.dat
@@ -70,9 +74,11 @@ Git would continue to track them.)
 Once we have created this file,
 the output of `git status` is much cleaner:
 
+```bash
+git status
 ```
-$ git status
-```
+
+--
 
 ```
 On branch master
@@ -92,13 +98,15 @@ the same things that we're ignoring.
 Let's add and commit `.gitignore`:
 
 ```bash
-$ git add .gitignore
-$ git commit -m "Add the ignore file"
-$ git status
+git add .gitignore
+git commit -m "Add the ignore file"
+git status
 ```
 
+--
+
 ```
-# On branch master
+On branch master
 nothing to commit, working directory clean
 ```
 
@@ -107,8 +115,10 @@ nothing to commit, working directory clean
 As a bonus, using `.gitignore` helps us avoid accidentally adding to the repository files that we don't want to track:
 
 ```bash
-$ git add a.dat
+git add a.dat
 ```
+
+--
 
 ```
 The following paths are ignored by one of your .gitignore files:
@@ -125,8 +135,10 @@ we can use `git add -f` to force Git to add something. For example,
 We can also always see the status of ignored files if we want:
 
 ```bash
-$ git status --ignored
+git status --ignored
 ```
+
+--
 
 ```
 On branch master
@@ -165,6 +177,8 @@ only the `/plots/` subfolder by adding the following line to
 your .gitignore:
 
 `results/plots/`
+
+???
 
 If, instead, you want to ignore everything in `/results/`, but wanted to track
 `results/data`, then you can add `results/` to your .gitignore

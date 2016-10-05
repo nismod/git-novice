@@ -60,10 +60,10 @@ Discuss problems in our Slack team `nismod.slack.com`:
 
 ![Create an Issue](../fig/github-issue-numbered.png)
 
-## Reference issues in commit messages
+Reference issues in commit messages
 
 ```bash
-$ git commit -m "Fixes bug #25. Added float to variable"
+git commit -m "Fixes bug #25. Added float to variable"
 ```
 
 ---

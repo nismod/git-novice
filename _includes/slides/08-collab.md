@@ -28,7 +28,7 @@ Once there she can accept access to the Owner's repo.
 
 ???
 
-* For the next step, get into pairs.  
+* For the next step, get into pairs.
 * One person will be the "Owner" and the other
 will be the "Collaborator".
 * The goal is that the Collaborator add changes into
@@ -45,7 +45,7 @@ Next, the Collaborator needs to download a copy of the Owner's repository to her
 her `Desktop` folder, the Collaborator enters:
 
 ```bash
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
 ```
 
 Replace `vlad` with the Owner's username.
@@ -60,9 +60,9 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ```bash
-$ cd ~/Desktop/vlad-planets
-$ nano pluto.txt
-$ cat pluto.txt
+cd ~/Desktop/vlad-planets
+nano pluto.txt
+cat pluto.txt
 ```
 
 ```
@@ -70,8 +70,8 @@ It is so a planet!
 ```
 
 ```bash
-$ git add pluto.txt
-$ git commit -m "Some notes about Pluto"
+git add pluto.txt
+git commit -m "Some notes about Pluto"
 ```
 
 ```
@@ -81,10 +81,10 @@ $ git commit -m "Some notes about Pluto"
 
 ---
 
-Then push the change to the *Owner's repository* on GitHub:
+Then push the change to the Owner's repository on GitHub:
 
 ```bash
-$ git push origin master
+git push origin master
 ```
 
 ```
@@ -110,7 +110,7 @@ Collaborator.
 To download the Collaborator's changes from GitHub, the Owner now enters:
 
 ```bash
-$ git pull origin master
+git pull origin master
 ```
 
 ```
@@ -140,7 +140,7 @@ our changes. The basic collaborative workflow would be:
 
 * update your local repo with `git pull origin master`,
 * make your changes and stage them with `git add`,
-* commit your changes with `git commit -m`, and
+* commit your changes with `git commit -m`
 * upload the changes to GitHub with `git push origin master`
 
 It is better to make many commits with smaller changes rather than
@@ -154,17 +154,15 @@ Switch roles and repeat the whole process.
 
 ---
 
-## Summary
-
-- "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
-
----
-
 ## Discuss: Review Changes
 
-The Owner push commits to the repository without giving any information
-to the Collaborator. How can the Collaborator find out what has changed with
-command line? And on GitHub?
+The Owner pushes commits to the repository without giving any information
+to the Collaborator.
+
+How can the Collaborator find out what has changed with
+command line?
+
+How can they find out what changed on GitHub?
 
 ---
 
@@ -176,12 +174,21 @@ has some suggestions to propose.
 With GitHub, it is possible to comment the diff of a commit. Over the line of
 code to comment, a blue comment icon appears to open a comment window.
 
-The Collaborator posts its comments and suggestions using GitHub interface.
+The Collaborator posts their comments and suggestions using the GitHub interface.
 
 ---
 
 ## Discuss: Version History, Backup, and Version Control
 
 Some backup software can keep a history of the versions of your files. They also
-allows you to recover specific versions. How is this functionality different from version control?
+allows you to recover specific versions.
+
+How is this functionality different from version control?
+
 What are some of the benifits of using version control, Git and Github?
+
+---
+
+## Summary
+
+- `git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up.

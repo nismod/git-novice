@@ -20,9 +20,9 @@ mars.
 Let's move to our home directory, create a directory for our work and then move into that directory:
 
 ```bash
-$ cd
-$ mkdir planets
-$ cd planets
+cd
+mkdir planets
+cd planets
 ```
 
 ## Note
@@ -42,7 +42,7 @@ Git can store versions of our files:
 Make a git repository!
 
 ```bash
-$ git init
+git init
 ```
 
 --
@@ -50,7 +50,7 @@ $ git init
 Look to see if any files were added:
 
 ```bash
-$ ls
+ls
 ```
 
 --
@@ -58,7 +58,7 @@ $ ls
 What about hidden files or folders?
 
 ```bash
-$ ls -a
+ls -a
 ```
 
 --
@@ -72,7 +72,7 @@ $ ls -a
 We could ask for more details from `ls`:
 
 ```bash
-$ ls -al
+ls -al
 ```
 
 ???
@@ -89,7 +89,7 @@ we will lose the project's history.
 Let's ask Git to tell us the status of our project:
 
 ```bash
-$ git status
+git status
 ```
 
 --
@@ -114,13 +114,13 @@ by asking git for a status update
 Think about starting a new project, `moons`, related to our `planets` project.
 
 ```bash
-$ cd             # return to home directory
-$ mkdir planets  # make a new directory planets
-$ cd planets     # go into planets
-$ git init       # make the planets directory a Git repository
-$ mkdir moons    # make a sub-directory planets/moons
-$ cd moons       # go into planets/moons
-$ git init       # make the moons sub-directory a Git repository
+cd             # return to home directory
+mkdir planets  # make a new directory planets
+cd planets     # go into planets
+git init       # make the planets directory a Git repository
+mkdir moons    # make a sub-directory planets/moons
+cd moons       # go into planets/moons
+git init       # make the moons sub-directory a Git repository
 ```
 
 Why might it be a bad idea to do this?
