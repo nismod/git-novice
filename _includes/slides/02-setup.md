@@ -59,7 +59,7 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 ## Text editor for git commit messages
 
-Pick a text editor to use (we'll use `nano` for the rest of this presentation):
+Pick a text editor to use (we'll use `notepad` for the rest of this presentation):
 
 | Command-line editors | Configuration command                          |
 |:-------------------|:-------------------------------------------------|

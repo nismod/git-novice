@@ -61,7 +61,7 @@ exactly the same way as we've been doing before:
 
 ```bash
 cd ~/Desktop/vlad-planets
-nano pluto.txt
+notepad pluto.txt
 cat pluto.txt
 ```
 

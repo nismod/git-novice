@@ -32,7 +32,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 ```
 
 Type the text below into the `mars.txt` file:
@@ -43,7 +43,7 @@ Cold and dry, but everything is my favorite colour
 
 ???
 
-(We'll use `nano` to edit the file;
+(We'll use `notepad` to edit the file;
 you can use whatever editor you like.
 In particular, this does not have to be the `core.editor` you set globally earlier.)
 
@@ -181,7 +181,7 @@ This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
 We use the `-m` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
 If we just run `git commit` without the `-m` option,
-Git will launch `nano` (or whatever other editor we configured as `core.editor`)
+Git will launch `notepad` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
 [Good commit messages][commit-messages] start with a brief (<50 characters) summary of
@@ -234,7 +234,7 @@ so that our filesystem doesn't become cluttered
 Now suppose Dracula adds more information to the file.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -269,7 +269,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ???
 
-(Again, we'll edit with `nano` and then `cat` the file to show its contents;
+(Again, we'll edit with `notepad` and then `cat` the file to show its contents;
 you may use a different editor, and don't need to `cat`.)
 
 The last line is the key phrase:
@@ -390,7 +390,7 @@ Let's run through the process again, from (1) the working directory to (2) the
 staging area, to (3) commiting.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -715,7 +715,7 @@ and commit those changes.
 ## Solution
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -724,7 +724,7 @@ Maybe I should start with a base on Venus.
 ```
 
 ```bash
-nano venus.txt
+notepad venus.txt
 cat venus.txt
 ```
 

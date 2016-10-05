@@ -20,7 +20,7 @@ Keypoints:
 Let's make another small change:
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -190,7 +190,7 @@ so Git lets us use just the first few characters.
 Let's suppose we accidentally overwrite our file:
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -383,9 +383,9 @@ What is the output of `cat venus.txt` at the end of this set of commands?
 
 ```bash
 cd planets
-nano venus.txt # add text: Venus is beautiful and full of love
+notepad venus.txt # add text: Venus is beautiful and full of love
 git add venus.txt
-nano venus.txt # add text: Venus is too hot to be suitable as a base
+notepad venus.txt # add text: Venus is too hot to be suitable as a base
 git commit -m "comments on Venus as an unsuitable base"
 git checkout HEAD venus.txt
 cat venus.txt # print the contents of venus.txt to the screen
