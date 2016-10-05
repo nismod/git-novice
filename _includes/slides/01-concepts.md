@@ -93,7 +93,7 @@ a `repository`
 ## Note
 
 * At no point are we copying files around
-* We just record which changes have been since the last commit
+* We just record which changes have been made since the last commit
 
 ???
 
