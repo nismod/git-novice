@@ -3,6 +3,11 @@ layout: reference
 permalink: /reference/
 ---
 
+
+## Commands used in the session
+
+A [list of commands used]({{ page.root }}/commands) in the session is available for quick reference.
+
 ## Git Cheatsheets for Quick Reference
 
 *   A great [printable git cheatsheet](https://services.github.com/resources/) is available in PDF from the GitHub training website.
