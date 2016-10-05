@@ -61,14 +61,11 @@ If you are concerned about privacy, please review [GitHub's instructions for kee
 
 Pick a text editor to use (we'll use `notepad` for the rest of this presentation):
 
-| Command-line editors | Configuration command                          |
+| Editor | Configuration command                          |
 |:-------------------|:-------------------------------------------------|
 | Notepad            | `git config --global core.editor notepad`
 | nano               | `git config --global core.editor "nano -w"`    |
 | vim                | `git config --global core.editor "vim"`        |
-
-| Graphical editors  | Configuration command                            |
-|:-------------------|:-------------------------------------------------|
 | Atom               | `git config --global core.editor "atom --wait"`|
 | Sublime Text (Mac) | `git config --global core.editor "subl -n -w"` |
 | Sublime Text (Win, 64-bit) | `git config --global core.editor "'C:\Program files\sublime text 3\sublime_text.exe' -w"` |
