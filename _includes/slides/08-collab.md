@@ -52,7 +52,7 @@ Replace `vlad` with the Owner's username.
 
 ---
 
-![After Creating Clone of Repository](../fig/github-collaboration.svg)
+<img alt="After Creating Clone of Repository" src="../fig/github-collaboration.svg" style="width: 80%;" />
 
 ---
 
