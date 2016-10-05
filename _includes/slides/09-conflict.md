@@ -46,7 +46,7 @@ different changes to each copy.
 Let's add a line to one partner's copy only:
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 

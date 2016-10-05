@@ -32,7 +32,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 ```
 
 Type the text below into the `mars.txt` file:
@@ -43,7 +43,7 @@ Cold and dry, but everything is my favorite colour
 
 ???
 
-(We'll use `nano` to edit the file;
+(We'll use `notepad` to edit the file;
 you can use whatever editor you like.
 In particular, this does not have to be the `core.editor` you set globally earlier.)
 
@@ -141,8 +141,19 @@ but it hasn't recorded these changes as a commit yet.
 Then we can record these changes as a commit:
 
 ```bash
-git commit -m "Start notes on Mars as a base"
+git commit
 ```
+
+This should open the text editor we configured earlier.
+
+Type a commit message:
+
+```
+Start notes on Mars as a base
+```
+
+
+Then save it, and close the message file in the editor.
 
 --
 
@@ -181,7 +192,7 @@ This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
 We use the `-m` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
 If we just run `git commit` without the `-m` option,
-Git will launch `nano` (or whatever other editor we configured as `core.editor`)
+Git will launch `notepad` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
 [Good commit messages][commit-messages] start with a brief (<50 characters) summary of
@@ -234,7 +245,7 @@ so that our filesystem doesn't become cluttered
 Now suppose Dracula adds more information to the file.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -269,7 +280,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ???
 
-(Again, we'll edit with `nano` and then `cat` the file to show its contents;
+(Again, we'll edit with `notepad` and then `cat` the file to show its contents;
 you may use a different editor, and don't need to `cat`.)
 
 The last line is the key phrase:
@@ -333,6 +344,9 @@ git commit -m "Add concerns about effects of Mars' moons on werewolves"
 git status
 ```
 
+Note: `git commit -m` lets us write a short message for the commit right on the
+command line, without opening a separate text editor.
+
 --
 
 ```
@@ -386,11 +400,11 @@ but not yet committed.
 
 ---
 
-Let's run through the process again, from (1) the working directory to (2) the
-staging area, to (3) commiting.
+Let's run through the process again, from (1) making a change in the working
+directory to (2) the staging area, to (3) commiting.
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -715,7 +729,7 @@ and commit those changes.
 ## Solution
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -724,7 +738,7 @@ Maybe I should start with a base on Venus.
 ```
 
 ```bash
-nano venus.txt
+notepad venus.txt
 cat venus.txt
 ```
 
@@ -736,7 +750,7 @@ Venus is a nice planet and I definitely should consider it as a base.
 
 Now you can add both files to the staging area. We can do that in one line:
 
-```
+```bash
 git add mars.txt venus.txt
 ```
 
@@ -754,6 +768,8 @@ Now the files are ready to commit. You can check that using `git status`. If you
 ```bash
 git commit -m "Wrote down my plans to start a base on Venus"
 ```
+
+--
 
 ```
 [master cc127c2]

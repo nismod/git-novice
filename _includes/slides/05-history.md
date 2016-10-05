@@ -20,7 +20,7 @@ Keypoints:
 Let's make another small change:
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -190,7 +190,7 @@ so Git lets us use just the first few characters.
 Let's suppose we accidentally overwrite our file:
 
 ```bash
-nano mars.txt
+notepad mars.txt
 cat mars.txt
 ```
 
@@ -243,6 +243,8 @@ Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 ```
+
+--
 
 To go back even further, we can use a commit identifier instead:
 
@@ -338,7 +340,7 @@ moving backward and forward in time becomes much easier.
 
 ---
 
-## Recovering Older Versions of a File
+## Exercise: Recovering Older Versions of a File
 
 Jennifer has made changes to the Python script that she has been working on for weeks, and the
 modifications she made this morning "broke" the script and it no longer runs. She has spent
@@ -356,19 +358,21 @@ let her recover the last committed version of her Python script called
 
 ---
 
-## Reverting a Commit
+## Exercise: Reverting a Commit
 
 Jennifer is collaborating on her Python script with her colleagues and
 realises her last commit to the group repository is wrong and wants to
 undo it.  Jennifer needs to undo correctly so everyone in the group
-repository gets the correct change.  `git revert [wrong commit ID]`
-will make a new commit that undoes Jennifer's previous wrong
-commit. Therefore `git revert` is different than `git checkout [commit
-ID]` because `checkout` is for local changes not committed to the
-group repository.  Below are the right steps and explanations for
-Jennifer to use `git revert`, what is the missing command?
+repository gets the correct change.
 
-1. `_________` # Look at the git history of the project to find the commit ID
+`git revert [wrong commit ID]` will make a new commit that undoes Jennifer's
+previous commit. Below are the right steps and explanations for
+Jennifer to use `git revert`. The first step is to look at the git history of
+the project to find the commit ID
+
+What is the missing command?
+
+1. ...
 2. Copy the ID (the first few characters of the ID, e.g. 0b1d055).
 3. `git revert [commit ID]`
 4. Type in the new commit message.
@@ -377,15 +381,15 @@ Jennifer to use `git revert`, what is the missing command?
 
 ---
 
-## Understanding Workflow and History
+## Exercise: Understanding Workflow and History
 
 What is the output of `cat venus.txt` at the end of this set of commands?
 
 ```bash
 cd planets
-nano venus.txt # add text: Venus is beautiful and full of love
+notepad venus.txt # add text: Venus is beautiful and full of love
 git add venus.txt
-nano venus.txt # add text: Venus is too hot to be suitable as a base
+notepad venus.txt # add text: Venus is too hot to be suitable as a base
 git commit -m "comments on Venus as an unsuitable base"
 git checkout HEAD venus.txt
 cat venus.txt # print the contents of venus.txt to the screen
@@ -393,14 +397,12 @@ cat venus.txt # print the contents of venus.txt to the screen
 
 1. `Venus is too hot to be suitable as a base`
 2. `Venus is beautiful and full of love`
-3. Both lines:
-        Venus is beautiful and full of love
-        Venus is too hot to be suitable as a base
+3. Both lines: <br>`Venus is beautiful and full of love`<br>`Venus is too hot to be suitable as a base`
 4. Error because you have changed venus.txt without committing the changes
 
 ---
 
-## Checking Understanding of `git diff`
+## Exercise: Checking Understanding of `git diff`
 
 Consider this command: `git diff HEAD~3 mars.txt`. What do you predict this command
 will do if you execute it? What happens when you do execute it? Why?
@@ -412,13 +414,15 @@ and what does happen?
 
 ---
 
-## Getting Rid of Staged Changes
+## Exercise: Getting Rid of Staged Changes
 
 `git checkout` can be used to restore a previous commit when unstaged changes have
 been made, but will it also work for changes that have been staged but not committed?
-Make a change to `mars.txt`, add that change, and use `git checkout` to see if
+
+Make a change to `mars.txt`, `git add` that change, and use `git checkout` to see if
 you can remove your change.
 
+(Hint: read the output of `git status` after you've staged the change)
 
 ---
 
@@ -440,9 +444,6 @@ git log mars.txt
 ```
 
 ---
-
-Unfortunately some of these commit messages are very ambiguous e.g. `update files`.
-How can you search through these files?
 
 Both `git diff` and `git log` are very useful and they summarize different part of the history for you.
 Is that possible to combine both? Let's try the following:

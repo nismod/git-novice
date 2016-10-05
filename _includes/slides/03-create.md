@@ -29,6 +29,8 @@ cd planets
 
 Your 'home directory' on Windows is something like `C:\Users\Dracula\`
 
+On Mac or Linux it is more like `/home/dracula/` or, generally, `~` for short
+
 ???
 
 Once Git is configured,
@@ -58,21 +60,28 @@ ls
 What about hidden files or folders?
 
 ```bash
-ls -a
+ls -A
 ```
 
 --
 
 ```
-.	..	.git
+.git
 ```
 
 --
 
-We could ask for more details from `ls`:
+We could ask for more detail from `ls`:
 
 ```bash
-ls -al
+ls -A -l
+```
+
+--
+
+```
+total 4
+drwxr-xr-x 1 dracula 1049089 0 Oct   5 15:00 .git/
 ```
 
 ???
@@ -94,7 +103,7 @@ git status
 
 --
 
-```bash
+```
 On branch master
 
 Initial commit
@@ -132,7 +141,7 @@ How can we undo the last `git init`?
 The commands above make the following directory structure:
 
 ```
-~/planets/
+~/planets
 ~/planets/.git
 ~/planets/moons
 ~/planets/moons/.git
