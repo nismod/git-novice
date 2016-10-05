@@ -66,6 +66,7 @@ results/
 
 These patterns tell Git to ignore any file whose name ends in `.dat`
 and everything in the `results` directory.
+
 (If any of these files were already being tracked,
 Git would continue to track them.)
 
@@ -155,7 +156,7 @@ nothing to commit, working directory clean
 
 ---
 
-## Ignoring Nested Files
+## Exercise: Ignoring Nested Files
 
 Given a directory structure that looks like:
 
@@ -187,7 +188,7 @@ The next challenge will cover this type of solution.
 
 ---
 
-## Including Specific Files
+## Exercise: Including Specific Files
 
 How would you ignore all `.data` files in your root directory except for
 `final.data`?
@@ -208,7 +209,7 @@ The exclamation point operator will include a previously excluded entry.
 
 ---
 
-## Ignoring all data Files in a Directory
+## Exercise: Ignoring all Data Files in a Directory
 
 Given a directory structure that looks like:
 
@@ -232,7 +233,7 @@ The file `results/data/position/gps/info.txt` will not be ignored.
 
 ---
 
-## The Order of Rules
+## Exercise: The Order of Rules
 
 Given a `.gitignore` file with the following contents:
 
@@ -253,7 +254,7 @@ none of them will be ignored, and all `.data` files will be tracked.
 
 ---
 
-## Log Files
+## Exercise: Log Files
 
 You wrote a script that creates many intermediate log-files of the form `log_01`, `log_02`, `log_03`, etc.
 You want to keep them but you do not want to track them through `git`.

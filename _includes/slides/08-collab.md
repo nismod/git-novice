@@ -2,14 +2,14 @@
 # 8. Collaborating
 
 Questions:
-- "How can I use version control to collaborate with other people?"
+- How can I use version control to collaborate with other people?
 
 Objectives:
-- "Clone a remote repository."
-- "Collaborate pushing to a common repository."
+- Clone a remote repository.
+- Collaborate pushing to a common repository.
 
 Keypoints:
-- "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
+- `git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up.
 
 ---
 
@@ -68,6 +68,8 @@ cat pluto.txt
 ```
 It is so a planet!
 ```
+
+--
 
 ```bash
 git add pluto.txt

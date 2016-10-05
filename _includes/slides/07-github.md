@@ -283,4 +283,4 @@ local and remote repositories?
 - Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.
 - `git push` copies changes from a local repository to a remote repository.
 - `git pull` copies changes from a remote repository to a local repository.
-
+- `git remote add origin https://github.com/vlad/planets.git` adds a reference in a local repository to a remote repository
