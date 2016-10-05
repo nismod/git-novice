@@ -25,15 +25,20 @@ ITRC-MISTRAL Induction Workshop - 7th October 2016
 
 ---
 
-# Resources
+## Resources
 
 These slides are available from:
-  https://nismod.github.io/git-novice/presentation/
+- https://nismod.github.io/git-novice/presentation/
 
 Further resources are available from the website:
-  https://nismod.github.io/git-novice/
+- https://nismod.github.io/git-novice/
 
-# Conventions
+A list of commands used in the session is available for quick reference:
+- https://nismod.github.io/git-novice/commands/
+
+--
+
+## Conventions
 
 ```bash
 the dollar sign means this is a command to type in
