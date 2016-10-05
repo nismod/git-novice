@@ -33,12 +33,12 @@ These slides are available from:
 Further resources are available from the website:
   https://nismod.github.io/git-novice/
 
-# Syntax
+# Conventions
 
 ```bash
-$ the dollar sign means this is a command to type in
+the dollar sign means this is a command to type in
 ```
 
-```bash
+```
 this is an output as there is no dollar sign
 ```
